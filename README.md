@@ -31,6 +31,8 @@ we need these node package
  - `npm start`
 
 # Usage
+ - Call back-end API
+ - Rendering UI
 
 # Related repository
 - [Back-end](https://github.com/wjrmffldrhrl/armagyeddon-backend)

@@ -10,6 +10,15 @@ Armagyeddon is blockchain-based traditional Korean cooperative organization plat
  - `sudo apt-get update`
 
  - `sudo apt-get install -y nodejs build-essential`
+ 
+ ## git clone
+ 
+ ## package
+     "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1"
 
 # Usage
 

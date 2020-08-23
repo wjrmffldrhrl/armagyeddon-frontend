@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 import AuthenticationService from '../../services/AuthenticationService.js'
 
-class WelcomeComponent extends Component {
+class MypageComponent extends Component {
     
     constructor(props) {
         super(props)
@@ -47,7 +47,7 @@ class WelcomeComponent extends Component {
             <>
                 <h1>Welcome!</h1>
                 <div className="container">
-                    Welcome {this.props.match.params.name}.
+                    Welcome
                 </div>
                 <div className="container">
                     Check if axiosInterceptors is working well!<br></br>
@@ -64,4 +64,4 @@ class WelcomeComponent extends Component {
 }
 
 
-export default WelcomeComponent
+export default MypageComponent;

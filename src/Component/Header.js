@@ -9,20 +9,26 @@ class Header extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            isUserLoggedIn: AuthenticationService.isUserLoggedIn(),
-            welcomPath: '/welcome/' + AuthenticationService.getLoggedInUserEmail(),
-        };
+        this.handleLogout = this.handleLogout.bind(this);
+   
+    }
+
+
+    handleLogout(e) {
+        AuthenticationService.logout();
+        this.props.userStateChange(AuthenticationService.isUserLoggedIn());
     }
 
     render() {
+
+        const isLoggedIn = this.props.isLoggedIn;
 
         return (
             
             <section id="home" className="section bg-voilet bg-overlay overflow-hidden d-flex align-items-center">
                 <div className="container">
                     {
-                        !this.state.isUserLoggedIn &&
+                        !this.props.isLoggedIn &&
                         <div className="button-group store-buttons d-flex">
                         
                             <Link to="/" className="btn btn-primary slide_right_alt">
@@ -39,15 +45,19 @@ class Header extends React.Component {
                         </div>  
                     }
                     {
-                        this.state.isUserLoggedIn &&
+                        this.props.isLoggedIn &&
                         <div className="button-group store-buttons d-flex">
                             
                             <Link to="/" className="btn btn-primary slide_right_alt">
                                 Home
                             </Link>
                             
+                            <Link to="/mypage" className="btn btn-primary slide_left_alt">
+                                Mypage
+                            </Link>
+
                             <Link to="/logout" className="btn btn-primary slide_left_alt"  
-                                    onClick={AuthenticationService.logout}>Logout
+                                    onClick={this.handleLogout}>Logout
                             </Link>
                         </div> 
                     }

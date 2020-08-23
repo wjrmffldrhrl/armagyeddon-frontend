@@ -86,6 +86,13 @@ class AuthenticationService {
     }
 
 
+    executeUserRegister(email, password, name, school) {
+        return axios.post('/user', {
+            email,
+            password,
+            name
+        });
+    }
 }
 
-export default new AuthenticationService()
+export default new AuthenticationService();

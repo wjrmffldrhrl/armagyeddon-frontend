@@ -1,5 +1,6 @@
 import React from 'react';
-import ResearchService from '../../services/ResearchService';
+import GyeService from '../../services/GyeService';
+
 class GyeListComponent extends React.Component {
 
     constructor(props) {
@@ -11,7 +12,7 @@ class GyeListComponent extends React.Component {
     }
 
     componentDidMount() {
-        ResearchService.getResearchList()
+        GyeService.getGyeList()
         .then(response => {
             this.setState({gyes: response.data});
         })
@@ -23,13 +24,13 @@ class GyeListComponent extends React.Component {
     render() {
         let gyes = this.state.gyes;
         const listItem = gyes.map((gye) =>
-            <li>{gye.title}</li>
+            <li><a href={'/gye/' + gye.id}>{gye.title}</a></li>
         );
 
 
         return(
             <div>
-                <h1>Gye List</h1>
+                
                 <ul>{listItem}</ul>
                 
             </div>

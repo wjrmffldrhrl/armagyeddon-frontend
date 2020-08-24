@@ -9,6 +9,8 @@ import AuthenticatedRoute from '../config/AuthenticatedRoute';
 import MyPage from '../Pages/MyPage';
 import AuthenticationService from '../services/AuthenticationService';
 import RegisterForm from './login/RegisterForm';
+import GyeList from '../Pages/gye/GyeList';
+import GyeDetails from '../Pages/gye/GyeDetails';
 
 class Routes extends React.Component {
     constructor(props) {
@@ -39,6 +41,8 @@ class Routes extends React.Component {
                     <Route path="/sign-up" component={RegisterForm}/>
                     <AuthenticatedRoute path="/mypage" component={MyPage}/>
                     <AuthenticatedRoute path="/logout" component={Home}/>
+                    <AuthenticatedRoute path="/gye-list" component={GyeList}/>
+                    <AuthenticatedRoute path="/gye/:id" component={GyeDetails}/>
                     
                 </Switch>
                 

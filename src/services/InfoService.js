@@ -3,7 +3,7 @@ import AuthenticationService from './AuthenticationService';
 
 class InfoService {
 
-    getStudentInfo(email) {
+    getUserInfo(email) {
         console.log(email);
         AuthenticationService.setupAxiosInterceptors();
         return axios.get('/user' + '?email=' + email);

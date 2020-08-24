@@ -9,7 +9,7 @@ class GyeService {
 
     getGyeDetails(id) {
         AuthenticationService.setupAxiosInterceptors();
-        return axios.get('https://jsonplaceholder.typicode.com/posts'+'/'+id);
+        return axios.get('https://jsonplaceholder.typicode.com/posts/'+id);
     }
 }
 

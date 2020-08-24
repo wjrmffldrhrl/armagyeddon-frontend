@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 
 import AuthenticationService from '../../services/AuthenticationService.js'
 import InfoService from '../../services/InfoService';
+import ArmaTokenService from '../../services/ArmaTokenService';
 class MyPageComponent extends Component {
     
     constructor(props) {
@@ -10,19 +11,57 @@ class MyPageComponent extends Component {
         this.state = {
             welcomeMessage : '',
             loggedInUser : AuthenticationService.getLoggedInUserEmail(),
-            info : ''
-        }
-        this.handleSuccessfulResponse = this.handleSuccessfulResponse.bind(this)
-        this.handleError = this.handleError.bind(this)
+            info : '',
+            balance : '',
+            amount : 0,
+            chargingMessage : ''
+        };
+        this.handleSuccessfulResponse = this.handleSuccessfulResponse.bind(this);
+        this.handleError = this.handleError.bind(this);
+        this.getBalance = this.getBalance.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.chargeToken = this.chargeToken.bind(this);
     }
 
     componentDidMount() {
-        InfoService.getStudentInfo(this.state.loggedInUser)
+        InfoService.getUserInfo(this.state.loggedInUser)
         .then(response => {
             console.log(response.data);
             this.setState({info : response.data});
         }).catch(error => {
             console.log(error);
+        });
+
+        this.getBalance();
+
+    }
+
+    getBalance() {
+        ArmaTokenService.getBalance()
+        .then(response => {
+            console.log('response.data :>> ', response.data);
+            this.setState({balance: response.data});
+        }).catch(error => {
+            console.log(error);
+        })
+    }
+
+    chargeToken() {
+        this.setState({
+            chargingMessage: 'charging...',
+            amount: 0
+        });
+        ArmaTokenService.chargeToken(this.state.amount)
+        .then(response => {
+            this.getBalance();
+            this.setState({
+                chargingMessage: 'Done!'
+            });
+        }).catch(error => {
+            console.log(error);
+            this.setState({
+                chargingMessage: 'ERROR!!'
+            });
         })
     }
 
@@ -33,6 +72,16 @@ class MyPageComponent extends Component {
         .then( response => this.handleSuccessfulResponse(response) )
         .catch( error => this.handleError(error) )
     }
+
+    handleChange(e) {
+        this.setState(
+            {
+                [e.target.name]
+                  :e.target.value
+            }
+        )
+    }
+
 
     handleSuccessfulResponse(response) {
         console.log(response)
@@ -82,6 +131,18 @@ class MyPageComponent extends Component {
                 </div>
                 <div className="container">
                     {this.state.welcomeMessage}
+                </div>
+                <div>
+                    Balance : {this.state.balance}
+                    <button onClick={this.getBalance}
+                        className="btn btn-success">Get Balance</button>
+                </div>
+                <div>
+                    Charge Token <input type="number" name="amount" 
+                    value={this.state.amount} onChange={this.handleChange}/>
+                    <button onClick={this.chargeToken}
+                        className="btn btn-success">Charge</button>
+                    {this.state.chargingMessage}
                 </div>
                 
             </>

@@ -56,6 +56,11 @@ class Header extends React.Component {
                                 My Page
                             </Link>
 
+                            <Link to="/gye-list" className="btn btn-primary slide_left_alt">
+                                Gye List
+                            </Link>
+
+
                             <Link to="/logout" className="btn btn-primary slide_left_alt"  
                                     onClick={this.handleLogout}>Logout
                             </Link>

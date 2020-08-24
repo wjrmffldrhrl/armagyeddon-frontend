@@ -6,7 +6,7 @@ import Login from "../Pages/Login";
 import Header from "./Header";
 import Home from "../Pages/Home";
 import AuthenticatedRoute from '../config/AuthenticatedRoute';
-import MypageComponent from './login/MypageComponent';
+import MyPage from '../Pages/MyPage';
 import AuthenticationService from '../services/AuthenticationService';
 import RegisterForm from './login/RegisterForm';
 
@@ -37,7 +37,7 @@ class Routes extends React.Component {
                     <Route path="/login" render={
                                 (props) => <Login {...props} userStateChange={this.handleUserState}/>}/>
                     <Route path="/sign-up" component={RegisterForm}/>
-                    <AuthenticatedRoute path="/mypage" component={MypageComponent}/>
+                    <AuthenticatedRoute path="/mypage" component={MyPage}/>
                     <AuthenticatedRoute path="/logout" component={Home}/>
                     
                 </Switch>

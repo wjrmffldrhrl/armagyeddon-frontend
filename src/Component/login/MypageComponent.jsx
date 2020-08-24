@@ -1,17 +1,29 @@
 import React, {Component} from 'react'
 
 import AuthenticationService from '../../services/AuthenticationService.js'
-
-class MypageComponent extends Component {
+import InfoService from '../../services/InfoService';
+class MyPageComponent extends Component {
     
     constructor(props) {
         super(props)
         this.retrieveWelcomeMessage = this.retrieveWelcomeMessage.bind(this)
         this.state = {
-            welcomeMessage : ''
+            welcomeMessage : '',
+            loggedInUser : AuthenticationService.getLoggedInUserEmail(),
+            info : ''
         }
         this.handleSuccessfulResponse = this.handleSuccessfulResponse.bind(this)
         this.handleError = this.handleError.bind(this)
+    }
+
+    componentDidMount() {
+        InfoService.getStudentInfo(this.state.loggedInUser)
+        .then(response => {
+            console.log(response.data);
+            this.setState({info : response.data});
+        }).catch(error => {
+            console.log(error);
+        })
     }
 
 
@@ -43,12 +55,26 @@ class MypageComponent extends Component {
 
     
     render() {
+        let userInfo = this.state.info;
         return (
             <>
                 <h1>Welcome!</h1>
                 <div className="container">
                     Welcome
                 </div>
+                    {
+                        userInfo && <div>
+                            <p>name : {userInfo.name}</p>
+                            <p>email : {userInfo.email}</p>
+                            
+                        </div>
+
+                    }
+                    {
+                        !userInfo && <div>
+                            Loading....
+                        </div>
+                    }
                 <div className="container">
                     Check if axiosInterceptors is working well!<br></br>
                     <button onClick={this.retrieveWelcomeMessage} 
@@ -64,4 +90,4 @@ class MypageComponent extends Component {
 }
 
 
-export default MypageComponent;
+export default MyPageComponent;

@@ -53,7 +53,7 @@ class Header extends React.Component {
                             </Link>
                             
                             <Link to="/mypage" className="btn btn-primary slide_left_alt">
-                                Mypage
+                                My Page
                             </Link>
 
                             <Link to="/logout" className="btn btn-primary slide_left_alt"  

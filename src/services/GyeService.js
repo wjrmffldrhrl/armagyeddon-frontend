@@ -11,6 +11,13 @@ class GyeService {
         AuthenticationService.setupAxiosInterceptors();
         return axios.get('https://jsonplaceholder.typicode.com/posts/'+id);
     }
+
+    createGye(name, period, state, targetMoney, totalMember, type) {
+        AuthenticationService.setupAxiosInterceptors();
+        return axios.post('/gye', {
+            name, period, state, targetMoney, totalMember, type
+        });
+    }
 }
 
 export default new GyeService();

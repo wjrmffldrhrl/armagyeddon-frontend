@@ -86,8 +86,8 @@ class AuthenticationService {
     }
 
 
-    executeUserRegister(email, password, name, school) {
-        return axios.post('/user', {
+    executeUserRegister(email, password, name) {
+        return axios.post('/user-info', {
             email,
             password,
             name

@@ -24,7 +24,7 @@ class GyeListComponent extends React.Component {
     render() {
         let gyes = this.state.gyes;
         const listItem = gyes.map((gye) =>
-            <li><a href={'/gye/' + gye.id}>{gye.title}</a></li>
+            <li key={gye.id}><a href={'/gye/' + gye.id}>{gye.title}</a></li>
         );
 
 

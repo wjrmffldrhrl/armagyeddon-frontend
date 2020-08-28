@@ -11,7 +11,8 @@ class GyeCreateComponent extends React.Component {
             targetMoney: 0,
             totalMember: 0,
             type: 'travle',
-            state: 'wait'
+            state: 'wait',
+            turn: 0
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,12 +30,12 @@ class GyeCreateComponent extends React.Component {
     handleSubmit(e) {
         console.log(this.state.title, this.state.period, 
             this.state.state, this.state.targetMoney, 
-            this.state.totalMember, this.state.type);
+            this.state.totalMember, this.state.type, this.state.turn);
             
         GyeService
         .createGye(this.state.title, this.state.period, 
             this.state.state, this.state.targetMoney, 
-            this.state.totalMember, this.state.type)
+            this.state.totalMember, this.state.type, this.state.turn)
         .then( response => {
             console.log(response.data);
             let id = response.data;
@@ -71,6 +72,11 @@ class GyeCreateComponent extends React.Component {
                     <label>
                         Member: 
                         <input type="number" name="totalMember" value={this.state.totalMember} 
+                            onChange={this.handleChange}/>
+                    </label>
+                    <label>
+                        Turn: 
+                        <input type="number" name="turn" value={this.state.turn} 
                             onChange={this.handleChange}/>
                     </label>
                     <label>

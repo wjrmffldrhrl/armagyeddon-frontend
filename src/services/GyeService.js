@@ -12,10 +12,10 @@ class GyeService {
         return axios.get('/gye/'+id);
     }
 
-    createGye(title, period, state, targetMoney, totalMember, type) {
+    createGye(title, period, state, targetMoney, totalMember, type, turn) {
         AuthenticationService.setupAxiosInterceptors();
         return axios.post('/gye', {
-            title, period, state, targetMoney, totalMember, type
+            title, period, state, targetMoney, totalMember, type , turn
         });
     }
 }

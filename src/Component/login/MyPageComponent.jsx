@@ -7,7 +7,7 @@ class MyPageComponent extends Component {
     
     constructor(props) {
         super(props)
-        this.retrieveWelcomeMessage = this.retrieveWelcomeMessage.bind(this)
+       
         this.state = {
             welcomeMessage : '',
             loggedInUser : AuthenticationService.getLoggedInUserEmail(),
@@ -16,8 +16,7 @@ class MyPageComponent extends Component {
             amount : 0,
             chargingMessage : ''
         };
-        this.handleSuccessfulResponse = this.handleSuccessfulResponse.bind(this);
-        this.handleError = this.handleError.bind(this);
+
         this.getBalance = this.getBalance.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.chargeToken = this.chargeToken.bind(this);
@@ -66,12 +65,6 @@ class MyPageComponent extends Component {
     }
 
 
-    retrieveWelcomeMessage() {
-        
-        AuthenticationService.executeHelloService()
-        .then( response => this.handleSuccessfulResponse(response) )
-        .catch( error => this.handleError(error) )
-    }
 
     handleChange(e) {
         this.setState(
@@ -80,26 +73,6 @@ class MyPageComponent extends Component {
                   :e.target.value
             }
         )
-    }
-
-
-    handleSuccessfulResponse(response) {
-        console.log(response)
-        this.setState({welcomeMessage: response.data})
-    }
-
-    handleError(error) {
-        console.log(error.response)
-        let errorMessage = '';
-        
-        if(error.message) 
-            errorMessage += error.message
-
-        if(error.response && error.response.data) {
-            errorMessage += error.response.data.message
-        }
-
-        this.setState({welcomeMessage: errorMessage})
     }
 
     
@@ -124,14 +97,8 @@ class MyPageComponent extends Component {
                             Loading....
                         </div>
                     }
-                <div className="container">
-                    Check if axiosInterceptors is working well!<br></br>
-                    <button onClick={this.retrieveWelcomeMessage} 
-                        className="btn btn-success">Get Message</button>
-                </div>
-                <div className="container">
-                    {this.state.welcomeMessage}
-                </div>
+                
+             
                 <div>
                     Balance : {this.state.balance}
                     <button onClick={this.getBalance}

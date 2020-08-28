@@ -6,7 +6,7 @@ class GyeCreateComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
+            title: '',
             period: 0,
             targetMoney: 0,
             totalMember: 0,
@@ -27,16 +27,18 @@ class GyeCreateComponent extends React.Component {
     }
 
     handleSubmit(e) {
-        console.log(this.state.name, this.state.period, 
+        console.log(this.state.title, this.state.period, 
             this.state.state, this.state.targetMoney, 
             this.state.totalMember, this.state.type);
             
         GyeService
-        .createGye(this.state.name, this.state.period, 
+        .createGye(this.state.title, this.state.period, 
             this.state.state, this.state.targetMoney, 
             this.state.totalMember, this.state.type)
         .then( response => {
             console.log(response.data);
+            let id = response.data;
+            this.props.history.push(`/gye/` + id);
             
         }).catch( error =>{
             
@@ -53,7 +55,7 @@ class GyeCreateComponent extends React.Component {
                 <form>
                     <label>
                         Title: 
-                        <input type="text" name="name" value={this.state.title} 
+                        <input type="text" name="title" value={this.state.title} 
                             onChange={this.handleChange}/>
                     </label>
                     <label>

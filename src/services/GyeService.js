@@ -4,18 +4,18 @@ import AuthenticationService from './AuthenticationService';
 class GyeService {
     getGyeList() {
         AuthenticationService.setupAxiosInterceptors();
-        return axios.get('https://jsonplaceholder.typicode.com/posts');
+        return axios.get('/gye');
     }
 
     getGyeDetails(id) {
         AuthenticationService.setupAxiosInterceptors();
-        return axios.get('https://jsonplaceholder.typicode.com/posts/'+id);
+        return axios.get('/gye/'+id);
     }
 
-    createGye(name, period, state, targetMoney, totalMember, type) {
+    createGye(title, period, state, targetMoney, totalMember, type) {
         AuthenticationService.setupAxiosInterceptors();
         return axios.post('/gye', {
-            name, period, state, targetMoney, totalMember, type
+            title, period, state, targetMoney, totalMember, type
         });
     }
 }

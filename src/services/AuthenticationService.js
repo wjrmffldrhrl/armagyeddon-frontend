@@ -12,13 +12,7 @@ class AuthenticationService {
         })
     }
 
-    //send get method to /hello
-    executeHelloService() {
-        console.log("===executeHelloService===")
 
-        this.setupAxiosInterceptors();
-        return axios.get('/hello');
-    }
 
 
     //save token with email

@@ -26,8 +26,12 @@ class GyeDetailsComponent extends React.Component {
         return (
              <div>
                  <h1>{gye.title}</h1>
-                 <h2>{this.props.id}</h2>
-                 <p>{gye.body}</p>
+                 <h2>Gye Mater : {gye.master}</h2>
+                 <p>Type : {gye.type}</p>
+                 <p>Target Money : {gye.targetMoney}</p>
+                 <p>Total Member : {gye.totalMember}</p>
+                 <p>Period : {gye.period}month</p>
+                 
              </div>
         );
     }

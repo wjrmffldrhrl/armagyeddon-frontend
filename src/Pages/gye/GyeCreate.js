@@ -5,7 +5,7 @@ class GyeCreate extends React.Component {
         return (
              <div>
                  <h1>Create Gye</h1>
-                 <GyeCreateComponent/>
+                 <GyeCreateComponent history={this.props.history}/>
              </div>
         );
     }

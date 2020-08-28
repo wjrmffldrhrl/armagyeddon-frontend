@@ -6,7 +6,7 @@ class InfoService {
     getUserInfo(email) {
         console.log(email);
         AuthenticationService.setupAxiosInterceptors();
-        return axios.get('/user' + '?email=' + email);
+        return axios.get('/user-info/' + email);
     }
 }
 

@@ -18,6 +18,13 @@ class GyeService {
             title, period, state, targetMoney, totalMember, type , turn
         });
     }
+
+    joinGye(gyeId, turn) {
+        AuthenticationService.setupAxiosInterceptors();
+        return axios.post('/member', {
+            gyeId, turn
+        });
+    }
 }
 
 export default new GyeService();

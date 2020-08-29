@@ -12,6 +12,7 @@ import RegisterForm from './login/RegisterForm';
 import GyeList from '../Pages/gye/GyeList';
 import GyeDetails from '../Pages/gye/GyeDetails';
 import GyeCreate from '../Pages/gye/GyeCreate';
+import GyeManagement from '../Pages/gye/GyeManagement';
 
 class Routes extends React.Component {
     constructor(props) {
@@ -45,7 +46,7 @@ class Routes extends React.Component {
                     <AuthenticatedRoute path="/gye-list" component={GyeList}/>
                     <AuthenticatedRoute path="/gye/:id" component={GyeDetails}/>
                     <AuthenticatedRoute path="/create-gye" component={GyeCreate}/>
-                    
+                    <AuthenticatedRoute path="/management-gye/:id" component={GyeManagement}/>
                 </Switch>
                 
                 

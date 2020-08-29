@@ -4,10 +4,10 @@ import AuthenticationService from './AuthenticationService';
 class ArmaTokenService {
 
     
-    getBalance() {
-        let loggedInUser = AuthenticationService.getLoggedInUserEmail();
+    getBalance(email) {
+        
         AuthenticationService.setupAxiosInterceptors();
-        return axios.get('/balance/'+ loggedInUser);
+        return axios.get('/balance/'+ email);
     }
 
     chargeToken(amount) {

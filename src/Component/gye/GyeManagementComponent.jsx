@@ -67,21 +67,26 @@ class GyeManagementComponent extends React.Component {
         let collectMoney = gye.targetMoney / gye.totalMember;
         console.log(collectMoney);
         console.log(gye.targetMoney);
-        this.state.members.forEach(member => {
-            console.log(member.email + ' : ' + member.balance);
-            ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney)
-                .then(response => {
-                    alert(member.email + ' send!');
-                })
-                .catch(error => {
-                    alert(member.email + ' error!');
-                });
+        console.log(this.state.members);
+        this.state.members.forEach(async (member) => {
+            
+            
+            const response = await 
+                ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney);
+
+                // .then( (response) => {
+                //     console.log(member.email + ' send!');
+                // })
+                // .catch(error => {
+                //     alert(member.email + ' error!');
+                // });
+            console.log(response.data);
 
         });
 
         // this.getBalance();
 
-        e.preventDefault();
+        // e.preventDefault();
     }
 
     handleSendToken(e) {

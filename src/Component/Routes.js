@@ -47,6 +47,7 @@ class Routes extends React.Component {
                     <AuthenticatedRoute path="/gye/:id" component={GyeDetails}/>
                     <AuthenticatedRoute path="/create-gye" component={GyeCreate}/>
                     <AuthenticatedRoute path="/management-gye/:id" component={GyeManagement}/>
+                    
                 </Switch>
                 
                 

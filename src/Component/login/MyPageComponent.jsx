@@ -36,7 +36,7 @@ class MyPageComponent extends Component {
     }
 
     getBalance() {
-        ArmaTokenService.getBalance(this.state.loggedInUser)
+        ArmaTokenService.getUserBalance(this.state.loggedInUser)
         .then(response => {
             console.log('response.data :>> ', response.data);
             this.setState({balance: response.data});

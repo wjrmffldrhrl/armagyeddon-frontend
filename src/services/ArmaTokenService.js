@@ -4,24 +4,38 @@ import AuthenticationService from './AuthenticationService';
 class ArmaTokenService {
 
     
-    getBalance(email) {
+    getUserBalance(email) {
         
         AuthenticationService.setupAxiosInterceptors();
         return axios.get('/user-token/'+ email);
     }
 
+    getGyeBalance(gyeId) {
+        
+        AuthenticationService.setupAxiosInterceptors();
+        return axios.get('/gye-token/'+ gyeId);
+    }
+    
     chargeToken(amount) {
         
         AuthenticationService.setupAxiosInterceptors();
         return axios.post('/user-token', amount);
     }
 
-    sendTokenToGye(from, gyeId, amount){
+    sendTokenToGye(userEmail, gyeId, amount){
         AuthenticationService.setupAxiosInterceptors();
         return axios.put('/user-token' , {
-            from, gyeId, amount
+            userEmail, gyeId, amount
         });
     }
+
+    sendTokenToUser(userEmail, gyeId, amount){
+        AuthenticationService.setupAxiosInterceptors();
+        return axios.put('/gye-token' , {
+            userEmail, gyeId, amount
+        });
+    }
+
 
 }
 

@@ -7,13 +7,20 @@ class ArmaTokenService {
     getBalance(email) {
         
         AuthenticationService.setupAxiosInterceptors();
-        return axios.get('/balance/'+ email);
+        return axios.get('/user-token/'+ email);
     }
 
     chargeToken(amount) {
-        let loggedInUser = AuthenticationService.getLoggedInUserEmail();
+        
         AuthenticationService.setupAxiosInterceptors();
-        return axios.get('/charge/'+ loggedInUser + '/' + amount);
+        return axios.post('/user-token', amount);
+    }
+
+    sendTokenToGye(from, gyeId, amount){
+        AuthenticationService.setupAxiosInterceptors();
+        return axios.put('/user-token' , {
+            from, gyeId, amount
+        });
     }
 
 }

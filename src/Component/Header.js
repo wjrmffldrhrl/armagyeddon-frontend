@@ -42,6 +42,12 @@ class Header extends React.Component {
                             <Link to="/sign-up" className="btn btn-primary slide_left_alt">
                                 Sign Up
                             </Link>
+
+                            <Link to="/about" className="btn btn-primary slide_left_alt">
+                                About
+                            </Link>
+
+                            
                         </div>  
                     }
                     {

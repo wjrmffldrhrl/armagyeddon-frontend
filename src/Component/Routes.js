@@ -13,6 +13,8 @@ import GyeList from '../Pages/gye/GyeList';
 import GyeDetails from '../Pages/gye/GyeDetails';
 import GyeCreate from '../Pages/gye/GyeCreate';
 import GyeManagement from '../Pages/gye/GyeManagement';
+import About from '../Pages/About';
+import Footer from '../Pages/Footer';
 
 class Routes extends React.Component {
     constructor(props) {
@@ -29,6 +31,7 @@ class Routes extends React.Component {
 
     render() {
         const HeaderWithRouter = withRouter(Header);
+        const FooterWithRouter = withRouter(Footer);
         const isLoggedIn = this.state.isLoggedIn;
 
         return(
@@ -41,6 +44,7 @@ class Routes extends React.Component {
                     <Route path="/login" render={
                                 (props) => <Login {...props} userStateChange={this.handleUserState}/>}/>
                     <Route path="/sign-up" component={RegisterForm}/>
+                    <Route path="/about" component={About}/>
                     <AuthenticatedRoute path="/mypage" component={MyPage}/>
                     <AuthenticatedRoute path="/logout" component={Home}/>
                     <AuthenticatedRoute path="/gye-list" component={GyeList}/>
@@ -50,7 +54,7 @@ class Routes extends React.Component {
                     
                 </Switch>
                 
-                
+                <FooterWithRouter/>
             </Router>
         );
     }

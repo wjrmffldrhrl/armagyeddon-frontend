@@ -58,6 +58,10 @@ class RegisterForm extends Component {
     }
     
     render() {
+        let divStyle = {
+            textAlign: "center",
+            color: "black"
+        }
         let passwordCheckerColor;
 
         if(this.state.passwordChecker === '') 
@@ -67,32 +71,67 @@ class RegisterForm extends Component {
         else passwordCheckerColor = {backgroundColor: '#FF0000'};
 
         return(
-            <div>
-                <h1>Register</h1>
-                <form>
-                    <label>
-                        email: 
-                        <input type="email" name="email" value={this.state.email} 
-                            onChange={this.handleChange}/>
-                    </label>
-                    <label>
-                        name: 
-                        <input type="text" name="name" value={this.state.name} 
-                            onChange={this.handleChange}/>
-                    </label>
-                    <label>
-                        password
-                        <input type="password" name="password" value={this.state.password} 
-                            onChange={this.handleChange}/>
-                    </label>
-                    <label>
-                        password check
-                        <input type="password" name="passwordChecker" value={this.state.passwordChecker}
-                            onChange={this.handleChange} style={passwordCheckerColor}></input>
-                    </label>
-                    <input type="button" value="Submit" onClick={this.handleSubmit}/>
-                </form>
+            <div className="row mb-5">
+
+                <div style={divStyle} className="col-lg-12">
+
+                    <div >
+                        <h1>Register</h1>
+                        <h3 className="text-black mb-5 border-bottom pb-2" >Your Information</h3>
+
+
+                    </div>
+                    <form>
+                    
+                    
+                        <div>
+                        <label>
+                            Email: 
+                            <input type="email" name="email" placeholder="you@yourdomain.com" value={this.state.email} 
+                                onChange={this.handleChange}/>
+                        </label>
+                        </div>
+
+                        <div>
+                        <label>
+                            name: 
+                            <input type="text" name="name" placeholder="Name" value={this.state.name} 
+                                onChange={this.handleChange}/>
+                        </label>
+                        </div>
+
+                        <div>
+                        <label>
+                            password
+                            <input type="password" name="password" placeholder="비밀번호" value={this.state.password} 
+                                onChange={this.handleChange}/>
+                        </label>
+                        </div>
+
+                        <div>
+                        <label>
+                            password check
+                            <input type="password" name="passwordChecker"  placeholder="비밀번호 확인" value={this.state.passwordChecker}
+                                onChange={this.handleChange} style={passwordCheckerColor}></input>
+                        </label>
+
+                        <div style={divStyle} className="col-1">
+                            <input type="button" className="btn btn-block btn-primary btn-md" value="Submit" onClick={this.handleSubmit}/>
+                        </div>
+
+                    </div>
+                    </form>
+                <div>
+
+                <form className="p-4 p-md-5 border rounded" method="post">
+                   
+               </form>
             </div>
+
+            </div>
+            </div>
+
+
         );
     }
 }

@@ -16,6 +16,8 @@ import GyeManagement from '../Pages/gye/GyeManagement';
 import About from '../Pages/About';
 import Footer from '../Pages/Footer';
 
+
+
 class Routes extends React.Component {
     constructor(props) {
         super(props);
@@ -31,6 +33,7 @@ class Routes extends React.Component {
 
     render() {
         const HeaderWithRouter = withRouter(Header);
+        
         const FooterWithRouter = withRouter(Footer);
         const isLoggedIn = this.state.isLoggedIn;
 

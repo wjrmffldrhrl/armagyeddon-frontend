@@ -71,17 +71,101 @@ class RegisterForm extends Component {
         else passwordCheckerColor = {backgroundColor: '#FF0000'};
 
         return(
+
+            
             <div className="row mb-5">
+
+                <div className="container h-100">
+                    <div className="d-flex justify-content-center h-100">
+                    <div className="register_card">
+                        <div className="d-flex justify-content-center">
+                            
+                            <div className="brand_logo_container">
+                                <img src="/images/icon2.png" className="brand_logo" alt="Logo"/>
+                            </div>
+                        </div>
+                        
+
+                        <div className="d-flex justify-content-center form_container" class="static">
+                            
+                        <h1><br></br> </h1>
+                        <h3 className="text-black mb-5 border-bottom pb-2" >Your Information</h3>
+                            <label>
+                                <div>
+                                    <div className="input-group mb-3">
+                                        <div className="input-group-append" >
+                                            <span className="input-group-text">
+                                                <i className="fas fa-user"></i>
+                                            </span>
+                                        </div>
+                                        
+                                        <input type="email" name="email" className="form-control input_user" 
+                                            value={this.state.email} onChange={this.handleChange} placeholder="you@yourdomain.com"/>
+                                            
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label>
+                                <div>
+                                    <div className="input-group mb-3">
+                                        <div className="input-group-append" >
+                                            <span className="input-group-text">
+                                                <i className="fas fa-user"></i>
+                                            </span>
+                                        </div>
+                                        
+                                        <input type="text" name="name" className="form-control input_user" 
+                                            value={this.state.name} onChange={this.handleChange} placeholder="Name"/>
+                                    </div>
+                                </div>
+                            </label>
+
+
+                            
+                            <label >
+                                <div >
+                                <div className="input-group mb-2">
+                                    <div className="input-group-append">
+                                        <div className="input-group-text"><i className="fas fa-key"></i></div>
+                                    </div>
+                                    <input type="password" name="password" className="form-control input_pass" 
+                                        value={this.state.password}  onChange={this.handleChange} placeholder="비밀번호"/>
+                                </div>
+                            
+                                <div className="input-group mb-2">
+                                    <div className="input-group-append">
+                                        <div className="input-group-text"><i className="fas fa-key"></i></div>
+                                    </div>
+                                    <input type="password" name="passwordChecker" className="form-control input_pass" 
+                                        value={this.state.passwordChecker} style={passwordCheckerColor} onChange={this.handleChange} placeholder="비밀번호 확인"/>
+                                </div>
+
+                                <div className="col-8">
+                                <input type="button" className="btn_submit" value="Submit" onClick={this.handleSubmit}/>
+                                </div>
+
+                
+                                </div>
+                            
+                            </label>
+                        </div>
+                
+                      
+                    </div>
+                    </div>
+                </div>
+
 
                 <div style={divStyle} className="col-lg-12">
 
-                    <div >
+                    {/* <div >
                         <h1>Register</h1>
                         <h3 className="text-black mb-5 border-bottom pb-2" >Your Information</h3>
 
 
-                    </div>
-                    <form>
+                    </div> */}
+                    {/* <form>
                     
                     
                         <div>
@@ -120,12 +204,12 @@ class RegisterForm extends Component {
                         </div>
 
                     </div>
-                    </form>
+                    </form> */}
                 <div>
 
-                <form className="p-4 p-md-5 border rounded" method="post">
+                {/* <form className="p-4 p-md-5 border rounded" method="post">
                    
-               </form>
+               </form> */}
             </div>
 
             </div>

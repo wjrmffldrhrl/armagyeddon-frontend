@@ -47,7 +47,7 @@ class Header extends React.Component {
                                 About
                             </Link>
 
-                            
+                                                        
                         </div>  
                     }
                     {

@@ -32,7 +32,7 @@ label {
 }
 .register_card {
     height: 550px;
-    width: 400px;
+    width: 600px;
     margin-top: 100px;
     margin-bottom: auto;
     background: #DDC2F4;
@@ -120,4 +120,12 @@ label {
     background: #BF94E4 !important;
     color: white !important;
     align-items: center;
+}
+.family {
+    width: 400px;
+    margin: auto;
+    margin-top: auto;
+}
+.agree {
+    margin-top: auto;
 }

@@ -5,9 +5,17 @@ html {
     height: 100%;
     background: #F5ECFD !important;
 }
+label {
+    margin-left: 40px;
+    margin-right: 10px;
+
+}
+.input-group {
+    margin-right: auto;
+}
 .user_card {
     height: 400px;
-    width: 350px;
+    width: 400px;
     margin-top: 100px;
     margin-bottom: auto;
     background: #DDC2F4;
@@ -20,6 +28,24 @@ html {
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
+
+}
+.register_card {
+    height: 550px;
+    width: 600px;
+    margin-top: 100px;
+    margin-bottom: auto;
+    background: #DDC2F4;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
 
 }
 .brand_logo_container {
@@ -41,29 +67,69 @@ html {
 .form_container {
     margin-top: 100px;
 }
+.botton-position {
+    margin-left: 0px;
+    align-items: center;
+}
+.static {
+    position: static;
+    margin-top: 50px;
+    margin-left: 30px
+}
 .login_btn {
-    width: 100%;
+    position: relative;
+    width: 100%;   
     background: #BF94E4 !important;
     color: white !important;
+    align-items: center;
+   
 }
 .login_btn:focus {
     box-shadow: none !important;
     outline: 0px !important;
+    position: absolute;
+   
 }
 .login_container {
     padding: 0 2rem;
+    position: static;
+    margin-top: 30px;
 }
 .input-group-text {
     background: #BF94E4 !important;
     color: white !important;
     border: 0 !important;
     border-radius: 0.25rem 0 0 0.25rem !important;
+    position: static;
 }
 .input_user,
 .input_pass:focus {
     box-shadow: none !important;
     outline: 0px !important;
+    position: static;
 }
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #BF94E4 !important;
+}
+
+.btn_submit {
+    margin-left: 160px;
+    position: static;
+    width: 100px;  
+    height: 40px; 
+    background: #BF94E4 !important;
+    color: white !important;
+    align-items: center;
+}
+.family {
+    width: 400px;
+    margin: auto;
+    margin-top: auto;
+}
+.agree {
+    margin-top: auto;
+}
+.btn-nonagree{  
+    width: 300px;
+    margin-left: 250px;
 }

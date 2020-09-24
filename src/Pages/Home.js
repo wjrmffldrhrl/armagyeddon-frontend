@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Friends from '../Pages/Friends';
 
 class Index extends React.Component {
     render() {
@@ -17,7 +17,7 @@ class Index extends React.Component {
                                     <p className="text-white my-4">블록체인 기반 계모임 플렛폼 Aramagyeddon에서 당신의 안전한 계모임을 생성하고 사람들을 모아보세요 변경 불가능한 장부를 자동으로 생성하여 여러분의 곗돈을 안전하게 지켜드립니다.</p>
         
                                     
-                                    <span className="d-inline-block text-white fw-3 font-italic mt-3">*Armagyeddon 프로젝트의 테스트 인덱스 페이지입니다.</span>
+                                    <span className="d-inline-block text-white fw-3 font-italic mt-3"></span>
                                 </div>
                             </div>
                             <div className="col-12 col-md-5 col-lg-6">
@@ -32,9 +32,25 @@ class Index extends React.Component {
                     </div>
 
                  
-                </div>       
-               
+                </div>    
 
+                <div className="container">
+                    <div className="row"> 
+                    <div className="col-lg-6 align-self-center text-center text-lg-left">
+                        <blockquote>
+                        <p>아마곗돈을 통해서 목돈 마련했어요! 여행자금으로 모으고 있는데 코로나19 끝나면 유럽갈거에요.</p>
+                        <p><cite> JuHyun Lee</cite></p>
+                        </blockquote>
+                    </div>
+                    <div className="col-lg-6 align-self-end text-center text-lg-right">
+                        <img src="images/cute.jpg" alt="Image" className="img-fluid mb-0"/>
+                    </div>
+                    </div>
+                </div>
+
+               
+               
+{/* 
                 <section id="stats" className="py-3">
                     <div className="container">
                         <div className="row justify-content-center">
@@ -91,7 +107,7 @@ class Index extends React.Component {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 <section id="services" className=" ">
                     <div className="container">
                         <div className="row justify-content-between align-items-center">
@@ -135,7 +151,7 @@ class Index extends React.Component {
                         </div>
                     </div>
                 </section>
-                <section id="features" className="py-5 bg-voilet text-white">
+                {/* <section id="features" className="py-5 bg-voilet text-white">
                     <div className="container">
                         <div className="row justify-content-center mb-5">
                             <div className="col-12 col-md-10 col-lg-7 section-heading text-center">
@@ -164,8 +180,8 @@ class Index extends React.Component {
                             </div>
                         </div>
                     </div>
-                </section>
-                <section id="features" className="py-5">
+                </section> */}
+                {/* <section id="features" className="py-5">
                 <div className="container">
                     <div className="row justify-content-center mb-5">
                         <div className="col-12 col-md-10 col-lg-7 section-heading text-center">
@@ -209,7 +225,7 @@ class Index extends React.Component {
 
 
                 </div>
-            </section>
+            </section> */}
           
             
             </div>

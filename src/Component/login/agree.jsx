@@ -155,14 +155,19 @@ class agree extends Component {
                             
                                             </li>
                                         </ul>
-                                        <ul class="footBtwrap clearfix">
-                                            <li><button onClick='#' class="fpmgBt1">비동의</button></li>
 
-                                            <li><button class="fpmgBt2" >동의</button></li>
-                                           <li><Link to="/RegisterForm" className="btn btn-primary slide_left_alt">
-                                                동의
-                                            </Link></li> 
-                                        </ul>
+                                        <div class="btn-nonagree"> 
+                                            <ul class="footBtwrap clearfix">
+                                                                                    
+                                                <li><Link to="/" className="btn btn-primary slide_left_alt">
+                                                    비동의
+                                                </Link></li> 
+                                            <li><Link to="/RegisterForm" className="btn btn-primary slide_left_alt">
+                                                    동의
+                                                </Link></li> 
+                                                
+                                            </ul>
+                                        </div>
                                     </form>
 
 

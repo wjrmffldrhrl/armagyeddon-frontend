@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import AuthenticationService from '../../services/AuthenticationService.js';
 import '../../static/css/agree.css';
+import '../../static/css/login.css';
 
 class RegisterForm extends Component {
 
@@ -138,15 +139,18 @@ class RegisterForm extends Component {
 
                            
                                 <div>
-                                <div className="input-group mb-2">
-                                    <div className="input-group-append">
-                                        <div className="input-group-text"><i className="fas fa-key"></i></div>
+                                    <div className="input-group mb-2">
+                                        <div className="input-group-append">
+                                            <div className="input-group-text"><i className="fas fa-key"></i></div>
+                                        </div>
+                                        <input type="password" name="passwordChecker" className="form-control input_pass" 
+                                            value={this.state.passwordChecker} style={passwordCheckerColor} onChange={this.handleChange} placeholder="비밀번호 확인"/>
                                     </div>
-                                    <input type="password" name="passwordChecker" className="form-control input_pass" 
-                                        value={this.state.passwordChecker} style={passwordCheckerColor} onChange={this.handleChange} placeholder="비밀번호 확인"/>
                                 </div>
+
+                                <div >
+                                    <input className="btn_submit" type="button" value="Submit" onClick={this.handleSubmit}/>
                                 </div>
-                            
                             </div>
                            
                         </div>

@@ -113,9 +113,9 @@ label {
 }
 
 .btn_submit {
-    margin-left: 50px;
+    margin-left: 160px;
     position: static;
-    width: 100%;  
+    width: 100px;  
     height: 40px; 
     background: #BF94E4 !important;
     color: white !important;
@@ -128,4 +128,8 @@ label {
 }
 .agree {
     margin-top: auto;
+}
+.btn-nonagree{  
+    width: 300px;
+    margin-left: 250px;
 }

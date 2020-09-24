@@ -101,8 +101,12 @@ class RegisterForm extends Component {
                                             </span>
                                         </div>
                                         
-                                        <input type="email" name="email" className="form-control input_user" 
-                                            value={this.state.email} onChange={this.handleChange} placeholder="you@yourdomain.com"/>
+                                        <input type="email" name="email"
+                                               className="form-control input_user"
+
+                                               placeholder="you@yourdomain.com"
+                                               value={this.state.email}
+                                               onChange={this.handleChange}/>
                                             
                                     </div>
                                 </div>
@@ -117,8 +121,8 @@ class RegisterForm extends Component {
                                             </span>
                                         </div>
                                         
-                                        <input type="text" name="name" className="form-control input_user" 
-                                            value={this.state.name} onChange={this.handleChange} placeholder="Name"/>
+                                        <input type="text" name="name" className="form-control input_user"
+                                               placeholder="Name" value={this.state.name} onChange={this.handleChange} />
                                     </div>
                                 </div>
                             
@@ -131,8 +135,8 @@ class RegisterForm extends Component {
                                     <div className="input-group-append">
                                         <div className="input-group-text"><i className="fas fa-key"></i></div>
                                     </div>
-                                    <input type="password" name="password" className="form-control input_pass" 
-                                        value={this.state.password}  onChange={this.handleChange} placeholder="비밀번호"/>
+                                    <input type="password" name="password" className="form-control input_pass"
+                                           placeholder="비밀번호" value={this.state.password}  onChange={this.handleChange} />
                                 </div>
                                 </div>
                            
@@ -143,13 +147,13 @@ class RegisterForm extends Component {
                                         <div className="input-group-append">
                                             <div className="input-group-text"><i className="fas fa-key"></i></div>
                                         </div>
-                                        <input type="password" name="passwordChecker" className="form-control input_pass" 
-                                            value={this.state.passwordChecker} style={passwordCheckerColor} onChange={this.handleChange} placeholder="비밀번호 확인"/>
+                                        <input type="password" name="passwordChecker" className="form-control input_pass"
+                                               placeholder="비밀번호 확인" value={this.state.passwordChecker} style={passwordCheckerColor} onChange={this.handleChange} />
                                     </div>
                                 </div>
 
                                 <div >
-                                    <input className="btn_submit" type="button" value="Submit" onClick={this.handleSubmit}/>
+                                    <input className="btn btn-block btn-primary btn-md" type="button" value="Submit" onClick={this.handleSubmit}/>
                                 </div>
                             </div>
                            

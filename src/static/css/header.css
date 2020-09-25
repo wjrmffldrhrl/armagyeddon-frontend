@@ -13,11 +13,23 @@
 
 .button-group a {
     margin-right: 10px;
-}
-.button-group {
-    margin: 15px;
+    
 }
 
+.button-group {
+    margin-left: 200px;   
+    margin-top: 20px;
+}
+.btn_armagyeddon {
+    margin-left: 30px;
+    margin-top: 10px;
+    
+}
+
+.btn_sign {
+    margin-top: 3px;
+    margin-left: 300px;
+}
 
 .slide_right_alt {
     border:none;
@@ -54,4 +66,5 @@
 .social a:hover span {
     color: #fff; 
 }
+
             

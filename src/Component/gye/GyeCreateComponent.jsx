@@ -26,7 +26,7 @@ class GyeCreateComponent extends React.Component {
                   :e.target.value
             }
         )
-        if(e.target.name == 'totalMember'){
+        if(e.target.name === 'totalMember'){
             this.state.interest = e.target.value;
             console.log(e.target.value)
 
@@ -117,5 +117,4 @@ class GyeCreateComponent extends React.Component {
 }
 
 export default GyeCreateComponent;
-
 

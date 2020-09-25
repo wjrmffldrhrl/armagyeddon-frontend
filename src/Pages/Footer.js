@@ -10,15 +10,7 @@ class Footer extends React.Component {
         <footer class="site-footer">
         <section id="features" className="py-5 bg-voilet text-white">
                     <div className="container">
-                        <div className="row justify-content-center mb-5">
-                            <div className="col-12 col-md-10 col-lg-7 section-heading text-center">
-                                {/* <h5 className="text-voilet mb-4">Premium Features</h5>
-                                <h2>What Makes sApp Different?</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p> */}
-                            </div>
-
-                        </div>
-
+                       
                         <div className="row justify-content-center text-center">
                             <div className="col-12 col-md-6 col-lg-4">
                                 <i className="fa fa-bicycle fa-4x text-white"></i>

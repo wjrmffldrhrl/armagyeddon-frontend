@@ -3,6 +3,7 @@ import Friends from '../Pages/Friends';
 import styles from '../static/css/index.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import {Link} from 'react-router-dom';
+import FriendsComponent from '../Component/home/FriendsComponet';
 
 class Index extends React.Component {
     render() {
@@ -30,6 +31,7 @@ class Index extends React.Component {
                                     <img src="/images/asteroid.svg" id="armagyeddon" alt=""/>
                 
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -37,45 +39,11 @@ class Index extends React.Component {
                  
                 </div>   
 
-                
-                <div class="container">
-                    <div class="row">
-                        <div id="demo" class="carousel slide" data-ride="carousel">
+                <div>
 
-                {/* <!-- Indicators --> */}
-                <ul class="carousel-indicators">
-                    <li data-target="#demo" data-slide-to="0" class="active"></li>
-                    <li data-target="#demo" data-slide-to="1"></li>
-                    <li data-target="#demo" data-slide-to="2"></li>
-                </ul>
+                    <FriendsComponent>메롱메롱</FriendsComponent>
 
-                {/* <!-- The slideshow --> */}
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images/cute.jpg" width="100%" alt="Los Angeles"/>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/soju.jpg" width="100%" alt="Chicago"/> 
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/chippo.jpg" width="100%" alt="New York"/>
-                    </div>
-                </div>
-
-                {/* <!-- Left and right controls --> */}
-                <a class="carousel-control-prev" href="#demo" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#demo" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-
-                </div>
-                    </div>
-                </div> 
-
+                </div>                                  
              
 
                 {/* <div className="container">
@@ -106,42 +74,33 @@ class Index extends React.Component {
                     </div>
                 </div> */}
  
+                <div class="logoplustext">
+                    <div class="text-center">               
+                                <h2 class="section-title mb-2">아마곗돈 제휴업체</h2>
+                                <p class="lead">아마곗돈 회원이라면 아마토큰으로 특가를 누리세요 </p>
+                    </div>
 
-                <div class="text-center">               
-                            <h2 class="section-title mb-2">아마곗돈 제휴업체</h2>
-                            <p class="lead">아마곗돈 회원이라면 아마토큰으로 특가를 누리세요 </p>
-                </div>
-
-                <div class="container_logo">                  
+                    <div class="container_logo">                  
+                            
+                    
+                            <div>
+                                <img src="images/logo_paypal.svg" alt="Image" class="logo 1"/>
+                                <img src="images/logo_stripe.svg" alt="Image" class="logo 2"/>
+                                <img src="images/logo_apple.svg" alt="Image" class="logo 3"/>
+                                
+                            </div>
+                            <div>
+                                <img src="images/logo_tinder.svg" alt="Image" class="logo 4"/>
+                                <img src="images/fninnoedu.png" alt="Image" class="logo 5"/>
+                                <img src="images/logo_airbnb.svg" alt="Image" class="logo 6"/>
+                                
+                            </div>
+                            
                         
-                   
-                        <div>
-                            <img src="images/logo_paypal.svg" alt="Image" class="logo 1"/>
-                            <img src="images/logo_stripe.svg" alt="Image" class="logo 2"/>
-                            <img src="images/logo_apple.svg" alt="Image" class="logo 3"/>
-                               
-                        </div>
-                        <div>
-                            <img src="images/logo_tinder.svg" alt="Image" class="logo 4"/>
-                            <img src="images/fninnoedu.png" alt="Image" class="logo 5"/>
-                            <img src="images/logo_airbnb.svg" alt="Image" class="logo 6"/>
-                               
-                        </div>
                         
-                    
-                    
-                </div>        
-                           
-                              
-                               
-                           
-                      
-                    
-               
-
-     
-          
-            
+                    </div>                       
+                </div>              
+                
             </div>
         );
     }

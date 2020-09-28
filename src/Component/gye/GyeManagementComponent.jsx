@@ -72,6 +72,7 @@ class GyeManagementComponent extends React.Component {
         // console.log(gye.targetMoney);
         // console.log(this.state.members);
 
+
         for (let i = 0; i < this.state.members.length; i++) {
             const member = this.state.members[i];
 
@@ -107,6 +108,7 @@ class GyeManagementComponent extends React.Component {
         // this.getBalance();
 
         // e.preventDefault();
+
     }
 
     handleSendToken(e) {

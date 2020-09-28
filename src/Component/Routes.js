@@ -9,10 +9,16 @@ import AuthenticatedRoute from '../config/AuthenticatedRoute';
 import MyPage from '../Pages/MyPage';
 import AuthenticationService from '../services/AuthenticationService';
 import RegisterForm from './login/RegisterForm';
+import agree from './login/agree';
 import GyeList from '../Pages/gye/GyeList';
 import GyeDetails from '../Pages/gye/GyeDetails';
 import GyeCreate from '../Pages/gye/GyeCreate';
 import GyeManagement from '../Pages/gye/GyeManagement';
+import About from '../Pages/About';
+import Footer from '../Pages/Footer';
+
+
+
 
 class Routes extends React.Component {
     constructor(props) {
@@ -29,6 +35,8 @@ class Routes extends React.Component {
 
     render() {
         const HeaderWithRouter = withRouter(Header);
+        
+        const FooterWithRouter = withRouter(Footer);
         const isLoggedIn = this.state.isLoggedIn;
 
         return(
@@ -40,7 +48,10 @@ class Routes extends React.Component {
                     <Route exact  path="/" component={Home}/>
                     <Route path="/login" render={
                                 (props) => <Login {...props} userStateChange={this.handleUserState}/>}/>
-                    <Route path="/sign-up" component={RegisterForm}/>
+                    <Route path="/RegisterForm" component={RegisterForm}/>
+                    <Route path="/sign-up" component={agree}/>
+                    {/*<Route path="/"
+                     <Route path="/about" component={About}/> */}
                     <AuthenticatedRoute path="/mypage" component={MyPage}/>
                     <AuthenticatedRoute path="/logout" component={Home}/>
                     <AuthenticatedRoute path="/gye-list" component={GyeList}/>
@@ -50,7 +61,7 @@ class Routes extends React.Component {
                     
                 </Switch>
                 
-                
+                <FooterWithRouter/>
             </Router>
         );
     }

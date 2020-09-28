@@ -10,7 +10,8 @@ class GyeCreateComponent extends React.Component {
             period: 0,
             targetMoney: 0,
             totalMember: 0,
-            type: 'travle',
+            type: '저축계',
+            interest:0,
             state: 'wait',
             turn: 0
         }
@@ -25,6 +26,11 @@ class GyeCreateComponent extends React.Component {
                   :e.target.value
             }
         )
+        if(e.target.name === 'totalMember'){
+            this.state.interest = e.target.value;
+            console.log(e.target.value)
+
+        }
     }
 
     handleSubmit(e) {
@@ -59,6 +65,29 @@ class GyeCreateComponent extends React.Component {
                         <input type="text" name="title" value={this.state.title} 
                             onChange={this.handleChange}/>
                     </label>
+
+                    <label>
+                        Type:
+                        <select name="type" value={this.state.type} onChange={this.handleChange}>
+
+                            <option value="저축계">저축계</option>
+                            <option value="낙찰계">낙찰계</option>
+
+                        </select>
+
+                    </label>
+                    {/* 낙찰계를 고르면 이율을 보여줌 */}
+                    {this.state.type === "낙찰계" &&
+
+                    <label type="number" name="interest">
+
+                        Interest: {this.state.interest}
+
+                    </label>
+
+                    }
+
+
                     <label>
                         Period: 
                         <input type="number" name="period" value={this.state.period} 
@@ -79,17 +108,7 @@ class GyeCreateComponent extends React.Component {
                         <input type="number" name="turn" value={this.state.turn} 
                             onChange={this.handleChange}/>
                     </label>
-                    <label>
-                        Type: 
-                        <select name="type" value={this.state.type} onChange={this.handleChange}>
-                            
-                            <option value="travle">Travle</option>
-                            <option value="saving">Saving</option>
-                            <option value="friendship">Friendship</option>
-                            
-                        </select>
 
-                    </label>                  
                     <input type="button" value="Submit" onClick={this.handleSubmit}/>
                 </form>
             </div>
@@ -98,5 +117,4 @@ class GyeCreateComponent extends React.Component {
 }
 
 export default GyeCreateComponent;
-
 

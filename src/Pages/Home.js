@@ -1,4 +1,5 @@
 import React from 'react';
+import Friends from '../Pages/Friends';
 
 class Index extends React.Component {
     render() {
@@ -16,7 +17,7 @@ class Index extends React.Component {
                                     <p className="text-white my-4">블록체인 기반 계모임 플렛폼 Aramagyeddon에서 당신의 안전한 계모임을 생성하고 사람들을 모아보세요 변경 불가능한 장부를 자동으로 생성하여 여러분의 곗돈을 안전하게 지켜드립니다.</p>
         
                                     
-                                    <span className="d-inline-block text-white fw-3 font-italic mt-3">*Armagyeddon 프로젝트의 테스트 인덱스 페이지입니다.</span>
+                                    <span className="d-inline-block text-white fw-3 font-italic mt-3"></span>
                                 </div>
                             </div>
                             <div className="col-12 col-md-5 col-lg-6">
@@ -31,51 +32,25 @@ class Index extends React.Component {
                     </div>
 
                  
-                </div>
-
-
-                <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                    <h1 className="display-4">LET'S GYE IT </h1>
-                    <p className="lead">목돈을 만들고 싶다면 계를 만들어보세요!</p>
-                </div>
+                </div>    
 
                 <div className="container">
-                <div className="card-deck mb-3 text-center">
-                    <div className="card mb-4 shadow-sm">
-                        <div className="card-header">
-                            <h4 className="my-0 font-weight-normal">참여중인 계</h4>
-                        </div>
-
-
-
-                        <button type="button" className="btn btn-lg btn-block btn-outline-primary" onClick="location.href='/gyejoining' ">자세히</button>
+                    <div className="row"> 
+                    <div className="col-lg-6 align-self-center text-center text-lg-left">
+                        <blockquote>
+                        <p>아마곗돈을 통해서 목돈 마련했어요! 여행자금으로 모으고 있는데 코로나19 끝나면 유럽갈거에요.</p>
+                        <p><cite> JuHyun Lee</cite></p>
+                        </blockquote>
+                    </div>
+                    <div className="col-lg-6 align-self-end text-center text-lg-right">
+                        <img src="images/cute.jpg" alt="Image" className="img-fluid mb-0"/>
+                    </div>
                     </div>
                 </div>
 
-                <div className="card mb-4 shadow-sm">
-                    <div className="card-header">
-                        <h4 className="my-0 font-weight-normal" >생성하기</h4>
-                    </div>
-
-                    <div className="card-body">
-
-
-                        <button type="button" className="btn btn-lg btn-block btn-primary" onClick="location.href='/gyecreation' ">+</button>
-                    </div>
-
-                </div>
-
-                <div className="card mb-4 shadow-sm">
-                    <div className="card-header">
-                        <h4 className="my-0 font-weight-normal">참가하기</h4>
-                    </div>
-                    <div className="card-body">
-
-                        <button type="button" className="btn btn-lg btn-block btn-primary" onClick="location.href='/gyefinder' ">구경하기</button>
-                    </div>
-                </div>
-            </div>
-
+               
+               
+{/* 
                 <section id="stats" className="py-3">
                     <div className="container">
                         <div className="row justify-content-center">
@@ -132,23 +107,22 @@ class Index extends React.Component {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 <section id="services" className=" ">
                     <div className="container">
                         <div className="row justify-content-between align-items-center">
                             <div className="col-12 col-lg-6 ">
-                                <h2 className="mb-4">Make your Device Manage Everything For you</h2>
+                                <h2 className="mb-4">블록체인 기반의 계모임 플랫폼</h2>
                                 <ul className="list-unstyled">
-                                    <li><p>Fully layered dolor sit amet, consectetur adipisicing elit. Facere, nobis, id expedita dolores officiis laboriosam.</p></li>
-                                    <li><p>Fully layered dolor sit amet, consectetur adipisicing elit. Facere, nobis, id expedita dolores officiis laboriosam.</p></li>
-                                    <li><p>Fully layered dolor sit amet, consectetur adipisicing elit. Facere, nobis, id expedita dolores officiis laboriosam.</p></li>
-                                    <li><p>Fully layered dolor sit amet, consectetur adipisicing elit. Facere, nobis, id expedita dolores officiis laboriosam.</p></li>
-
+                                    <li><p>아마곗돈 회원들이 결제한 자산은</p></li>
+                                    <li><p>아마곗돈이 ERC20을 활용해 만든 ‘아마토큰’ 으로 전환되며</p></li>
+                                    <li><p>계 참여와 동시에 곗돈 납부 및 수량 정보가 블록체인에 등록</p></li>
+                                    
                                 </ul>
                             </div>
                             <div className="col-12 col-lg-4 order-1 order-lg-2 d-none d-lg-block">
                                 <div className="home-thumb mx-auto">
-                                    <img src="/images/partner.svg" alt="" />
+                                    <img src="/images/blockchain1.png" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -157,27 +131,27 @@ class Index extends React.Component {
                 <section id="info" className=" py-5 ">
                     <div className="container">
                         <div className="row justify-content-between align-items-center">
-                            <div className="col-12 col-lg-4 ">
+                            <div className="col-12 col-lg-6 ">
                                 <div className="mx-auto">
-                                    <img src="/images/asteroid_color.svg" alt="" />
+                                    <img src="/images/rates.png" alt="" />
                                 </div>
                             </div>
                             <div className="col-12 col-lg-6 ">
-                                <h2 className="mb-4">Easily communicate with clients using sApp.</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolor ut iusto vitae autem neque eum ipsam, impedit asperiores vel cumque laborum dicta repellendus inventore voluptatibus et explicabo nobis unde.
-                                </p>
+                                <h2 className="mb-4">원하는 이자율과 순번 선택으로 </h2>
+                                <h2 className="mb-4">목적에 맞는 목표액 수령이 가능</h2>
+                                
+                               
                                 <ul>
-                                    <li><p>Fully layered dolor sit amet, consectetur adipisicing elit. Facere, nobis, id expedita dolores officiis laboriosam.</p></li>
-                                    <li><p>Fully layered dolor sit amet, consectetur adipisicing elit. Facere, nobis, id expedita dolores officiis laboriosam.</p></li>
-                                    <li><p>Fully layered dolor sit amet, consectetur adipisicing elit. Facere, nobis, id expedita dolores officiis laboriosam.</p></li>
-                                    <li><p>Fully layered dolor sit amet, consectetur adipisicing elit. Facere, nobis, id expedita dolores officiis laboriosam.</p></li>
+                                    <li><p>1. 앞 순번 : 금융기관의 이자율보다 낮기 때문에 급전이 필요한 경우에 선택</p></li>
+                                    <li><p>2. 중간 순번 : 핀테크 서비스인 만큼 세금 지출로 목표 금액이 낮아지지 않음</p></li>
+                                    <li><p>3. 뒷 순번 : 높은 이자율로 앞 순번의 회원들보다 높은 목표액 수령</p></li>                                    
                                 </ul>
                             </div>
 
                         </div>
                     </div>
                 </section>
-                <section id="features" className="py-5 bg-voilet text-white">
+                {/* <section id="features" className="py-5 bg-voilet text-white">
                     <div className="container">
                         <div className="row justify-content-center mb-5">
                             <div className="col-12 col-md-10 col-lg-7 section-heading text-center">
@@ -206,8 +180,8 @@ class Index extends React.Component {
                             </div>
                         </div>
                     </div>
-                </section>
-                <section id="features" className="py-5">
+                </section> */}
+                {/* <section id="features" className="py-5">
                 <div className="container">
                     <div className="row justify-content-center mb-5">
                         <div className="col-12 col-md-10 col-lg-7 section-heading text-center">
@@ -251,7 +225,7 @@ class Index extends React.Component {
 
 
                 </div>
-            </section>
+            </section> */}
           
             
             </div>

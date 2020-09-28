@@ -2,16 +2,17 @@ import React from 'react';
 import GyeService from '../../services/GyeService';
 import AuthenticationService from '../../services/AuthenticationService.js'
 import ArmaTokenService from '../../services/ArmaTokenService';
+
 class GyeManagementComponent extends React.Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            loggedInUser : AuthenticationService.getLoggedInUserEmail(),
-            gye : [],
-            members : [],
-            gyeBalance : ''
+            loggedInUser: AuthenticationService.getLoggedInUserEmail(),
+            gye         : [],
+            members     : [],
+            gyeBalance  : ''
         };
 
         this.handleCollect = this.handleCollect.bind(this);
@@ -19,7 +20,7 @@ class GyeManagementComponent extends React.Component {
         this.handleSendToken = this.handleSendToken.bind(this);
     }
 
-    
+
     componentDidMount() {
         this.getBalance();
     }
@@ -28,29 +29,31 @@ class GyeManagementComponent extends React.Component {
         let memberArray = [];
         GyeService.getGyeDetails(this.props.id)
             .then(response => {
-                
+
                 this.setState({gye: response.data});
-                
+
                 this.state.gye.members.forEach(member => {
                     let balance;
-                    ArmaTokenService.getUserBalance(member.email).then( response => {
+                    ArmaTokenService.getUserBalance(member.email).then(response => {
                         balance = response.data;
-                        
-                        memberArray.push({name : member.name, 
-                            email : member.email,
-                            balance : balance});
+
+                        memberArray.push({
+                            name   : member.name,
+                            email  : member.email,
+                            balance: balance
+                        });
                         this.setState({members: memberArray});
                     });
-                    
+
                 });
-    
+
                 console.log(this.state.gye);
                 console.log(memberArray);
-                
+
             })
             .catch(error => {
 
-        });
+            });
 
         ArmaTokenService.getGyeBalance(this.props.id)
             .then(response => {
@@ -58,36 +61,36 @@ class GyeManagementComponent extends React.Component {
             })
             .catch(error => {
 
-        });
+            });
     }
 
     async handleCollect(e) {
         alert('collect!');
         let gye = this.state.gye;
-        let collectMoney = gye.targetMoney / gye.totalMember;
+        let collectMoney = gye.targetMoney / (gye.totalMember - 1);
         // console.log(collectMoney);
         // console.log(gye.targetMoney);
         // console.log(this.state.members);
 
-        for (let i = 0; i < this.state.members.length ; i++) {
+        for (let i = 0; i < this.state.members.length; i++) {
             const member = this.state.members[i];
 
-            const response = await 
+            const response = await
                 ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney);
 
-                // .then( (response) => {
-                //     console.log(member.email + ' send!');
-                // })
-                // .catch(error => {
-                //     alert(member.email + ' error!');
-                // });
+            // .then( (response) => {
+            //     console.log(member.email + ' send!');
+            // })
+            // .catch(error => {
+            //     alert(member.email + ' error!');
+            // });
             console.log(response.data);
-            
+
         }
 
         // this.state.members.forEach(async (member) => {
-            
-            
+
+
         //     const response = await 
         //         ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney);
 
@@ -121,25 +124,27 @@ class GyeManagementComponent extends React.Component {
         let loggedinUser = this.state.loggedInUser;
         let gye = this.state.gye;
         let gyeBalance = this.state.gyeBalance;
-        let memberBalance = this.state.members.map( (member, index) => 
+        let memberBalance = this.state.members.map((member, index) =>
             <li key={index}> {member.name} : {member.balance}
-             <button className="btn btn-success" value={member.email} 
-                onClick={() => this.handleSendToken(member.email)}>send</button></li>)
+                <button className="btn btn-success" value={member.email}
+                        onClick={() => this.handleSendToken(member.email)}>send
+                </button>
+            </li>)
         return (
             <div>
-                { loggedinUser !== gye.master && 'your not gye master'}
-                { loggedinUser === gye.master && 
-                    <div>
-                        <h2>Gye Balance</h2>
-                        {gyeBalance}
-                        <h2>User Balance</h2>
-                        {memberBalance}
-                        <button className="btn btn-success" onClick={this.handleCollect}>Collect</button>
+                {loggedinUser !== gye.master && 'your not gye master'}
+                {loggedinUser === gye.master &&
+                <div>
+                    <h2>Gye Balance</h2>
+                    {gyeBalance}
+                    <h2>User Balance</h2>
+                    {memberBalance}
+                    <button className="btn btn-success" onClick={this.handleCollect}>Collect</button>
 
-                    </div>
-                    
+                </div>
+
                 }
-                
+
             </div>
         );
     }

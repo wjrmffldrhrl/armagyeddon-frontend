@@ -1,6 +1,6 @@
 import React from 'react';
 import AuthenticationService from '../services/AuthenticationService';
-import styles from '../static/css/login.css'
+import styles from '../static/css/login.css';
 
 class Login extends React.Component {
 

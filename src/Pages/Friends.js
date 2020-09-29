@@ -25,7 +25,7 @@ class Friends extends React.Component {
                     </div>
                 </div>
 
-                
+                                
                 <div className="container">
                     <div className="row">
                     <div className="col-lg-6 align-self-center text-center text-lg-left">

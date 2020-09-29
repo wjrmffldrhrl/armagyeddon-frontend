@@ -22,65 +22,118 @@ class Header extends React.Component {
     render() {
 
         const isLoggedIn = this.props.isLoggedIn;
+        
 
         return (
             
             <section id="home" className="section bg-voilet bg-overlay overflow-hidden d-flex align-items-center">
-                <div className="container">
+                <div class="btn_armagyeddon">
+                    <Link to="/" className="text-white font-weight-bold">                           
+                            <h1> Armagyeddon </h1>
+                            
+                            
+                    </Link>
+                </div>
+                
+            
+                <div className="container">                   
+                           
                     {
                         !this.props.isLoggedIn &&
                         <div className="button-group store-buttons d-flex">
+                            <div>
+
+
+                                <a><Link to="/" className="text-white font-weight-bold">
+                                    Home
+                                </Link></a><a></a><a></a>
+                                
+                                <a><Link to="/about" className="text-white font-weight-bold">
+                                    About 
+                                </Link></a><a></a><a></a>
+                                
+                                <a><Link to="/gye-list" className="text-white font-weight-bold">
+                                    Gye
+                                </Link></a><a></a><a></a>
+
+                                <a><Link to="/board" className="text-white font-weight-bold">
+                                    Board
+                                </Link></a><a></a><a></a>    
+
+                                <a><Link to="/contact" className="text-white font-weight-bold">
+                                    Contact Us
+                                </Link></a><a></a><a></a>                              
+                                                              
+                                                 
+                            </div> 
+
+                           
+                             <div class="btn_sign">
+
+                                 <a><Link to="/login" className="text-white font-weight-bold">
+                                    Sign In 
+                                </Link></a><a></a><a></a>
+
+                                <a><Link to="/sign-up" className="text-white font-weight-bold">
+                                    Sign Up
+                                </Link></a><a></a><a></a>
+
+                             </div>     
+
+                        </div>
+
                         
-                            <Link to="/" className="btn btn-primary slide_right_alt">
-                                Home
-                            </Link>
-                            
-                            <Link to="/login" className="btn btn-primary slide_right_alt">
-                                Sign In 
-                            </Link>
-                            
-                            <Link to="/sign-up" className="btn btn-primary slide_left_alt">
-                                Sign Up
-                            </Link>
-
-                            <Link to="/about" className="btn btn-primary slide_left_alt">
-                                About
-                            </Link>
-
-                                                        
-                        </div>  
+                        
                     }
+
                     {
-                        this.props.isLoggedIn &&
-                        <div className="button-group store-buttons d-flex">
-                            
-                            <Link to="/" className="btn btn-primary slide_right_alt">
-                                Home
-                            </Link>
-                            
-                            <Link to="/mypage" className="btn btn-primary slide_left_alt">
-                                My Page
-                            </Link>
-
-                            <Link to="/gye-list" className="btn btn-primary slide_left_alt">
-                                Gye List
-                            </Link>
-                        
-
-                            <Link to="/logout" className="btn btn-primary slide_left_alt"  
-                                    onClick={this.handleLogout}>Logout
-                            </Link>
-                        </div> 
-                    }
-                        
                     
-                
-                </div>
-                
-                
-                
-            </section>
-            
+                        this.props.isLoggedIn &&
+                       
+                       <div className="button-group store-buttons d-flex">
+                            <div>
+                                <a><Link to="/" className="text-white font-weight-bold">
+                                    Home
+                                </Link></a><a></a><a></a>
+
+                                <a><Link to="/about" className="text-white font-weight-bold">
+                                    About 
+                                </Link></a><a></a><a></a>
+
+                                <a><Link to="/gye-list" className="text-white font-weight-bold">
+                                    Gye
+                                </Link></a><a></a><a></a>
+
+                                <a><Link to="/search" className="text-white font-weight-bold">
+                                    Search
+                                 </Link></a><a></a><a></a><a></a>     
+
+                                <a><Link to="/contact" className="text-white font-weight-bold">
+                                    Contact Us
+                                </Link></a><a></a><a></a>                        
+                                                       
+                            </div> 
+                            
+                            <div class="btn_sign">
+
+                                <a><Link to="/mypage" className="text-white font-weight-bold">
+                                     My Page
+                                </Link></a><a></a><a></a>
+
+                                <a><Link to="/logout" className="text-white font-weight-bold"
+                                 onClick={this.handleLogout}>Logout
+                                </Link></a><a></a><a></a>
+
+                             </div>     
+                                                                            
+                        </div> 
+
+                        
+                    }                       
+                    
+                </div>     
+                               
+            </section>           
            
            
         );

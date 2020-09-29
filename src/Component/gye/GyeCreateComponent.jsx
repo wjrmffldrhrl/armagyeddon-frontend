@@ -36,12 +36,12 @@ class GyeCreateComponent extends React.Component {
     handleSubmit(e) {
         console.log(this.state.title, this.state.period, 
             this.state.state, this.state.targetMoney, 
-            this.state.totalMember, this.state.type, this.state.turn);
+            this.state.totalMember, this.state.interest, this.state.type, this.state.turn);
             
         GyeService
-        .createGye(this.state.title, this.state.period, 
+        .createGye(this.state.title, this.state.period,
             this.state.state, this.state.targetMoney, 
-            this.state.totalMember, this.state.type, this.state.turn)
+            this.state.totalMember, this.state.interest, this.state.type, this.state.turn)
         .then( response => {
             console.log(response.data);
             let id = response.data;

@@ -6,3 +6,36 @@
 .btn.btn-success {
     margin-left: 20px;
 }
+
+.gyeform {
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    background: #DDC2F4;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+}
+
+.buttontype {
+    margin-top: 50px;
+    margin-left: 150px;
+    width: 200px;   
+    background: #BF94E4 !important;
+    color: white !important;
+    align-items: center;
+}
+
+.ni {
+
+    color:   #BF94E4 !important;
+
+}
+

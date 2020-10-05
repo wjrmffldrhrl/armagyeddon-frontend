@@ -1,7 +1,39 @@
 import React from 'react';
 import GyeService from '../../services/GyeService';
+import styles from '../../static/css/gye.css';
+import classnames from "classnames";
+
+import {
+    Card,
+    CardBody,
+    NavItem,
+    NavLink,
+    Nav,
+    TabContent,
+    TabPane
+  } from "reactstrap";
+  
 
 class GyeCreateComponent extends React.Component {
+
+
+    state = {
+        tabs: 1
+      };
+      toggleNavs = (e, state, index) => {
+        e.preventDefault();
+        this.setState({
+          [state]: index
+        });
+      };
+      render() {
+        return (
+          <>
+            
+          </>
+        );
+      }
+    
 
     constructor(props) {
         super(props);
@@ -58,59 +90,241 @@ class GyeCreateComponent extends React.Component {
 
     render() {
         return (
-            <div>
-                <form>
-                    <label>
-                        Title: 
-                        <input type="text" name="title" value={this.state.title} 
-                            onChange={this.handleChange}/>
-                    </label>
-
-                    <label>
-                        Type:
-                        <select name="type" value={this.state.type} onChange={this.handleChange}>
-
-                            <option value="저축계">저축계</option>
-                            <option value="낙찰계">낙찰계</option>
-
-                        </select>
-
-                    </label>
-                    {/* 낙찰계를 고르면 이율을 보여줌 */}
-                    {this.state.type === "낙찰계" &&
-
-                    <label type="number" name="interest">
-
-                        Interest: {this.state.interest}
-
-                    </label>
-
-                    }
+            <div className="gyeform">
 
 
-                    <label>
-                        Period: 
-                        <input type="number" name="period" value={this.state.period} 
-                            onChange={this.handleChange}/>
-                    </label>
-                    <label>
-                        Target Money: 
-                        <input type="number" name="targetMoney" value={this.state.targetMoney} 
-                            onChange={this.handleChange}/>
-                    </label>
-                    <label>
-                        Member: 
-                        <input type="number" name="totalMember" value={this.state.totalMember} 
-                            onChange={this.handleChange}/>
-                    </label>
-                    <label>
-                        Turn: 
-                        <input type="number" name="turn" value={this.state.turn} 
-                            onChange={this.handleChange}/>
-                    </label>
+                <div className="nav-wrapper">
+                    <Nav
+                        className="nav-fill flex-column flex-md-row"
+                        id="tabs-icons-text"
+                        pills
+                        role="tablist"
+                    >
+                        <NavItem>
+                            <NavLink
+                                aria-selected={this.state.tabs === 1}
+                                className={classnames("mb-sm-3 mb-md-0", {
+                                active: this.state.tabs === 1
+                                })}
+                                onClick={e => this.toggleNavs(e, "tabs", 1)}
+                                href="#pablo"
+                                role="tab"
+                            >
+                                <i className="ni ni-cloud-upload-96 mr-2" />
+                                낙찰계
+                            </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink
+                                aria-selected={this.state.tabs === 2}
+                                className={classnames("mb-sm-3 mb-md-0", {
+                                active: this.state.tabs === 2
+                                })}
+                                onClick={e => this.toggleNavs(e, "tabs", 2)}
+                                href="#pablo"
+                                role="tab"
+                            >
+                                <i className="ni ni-bell-55 mr-2" />
+                                저축계
+                            </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink 
+                                aria-selected={this.state.tabs === 3}
+                                className={classnames("mb-sm-3 mb-md-0", {
+                                active: this.state.tabs === 3
+                                })}
+                                onClick={e => this.toggleNavs(e, "tabs", 3)}
+                                href="#pablo"
+                                role="tab"
+                            >
+                                <i className="ni ni-calendar-grid-58 mr-2" />
+                                기부계
+                            </NavLink>
+                        </NavItem>
+                    </Nav>
+                </div>
 
-                    <input type="button" value="Submit" onClick={this.handleSubmit}/>
-                </form>
+                <Card className="shadow">
+                    <CardBody className="cardbody">
+                        <TabContent activeTab={"tabs" + this.state.tabs}>
+                        <TabPane tabId="tabs1">
+                            <p className="description">
+                            <form>
+
+                                <label>
+                                    Type : 낙찰계                            
+                                </label>
+
+                                <div>
+
+                                <label>
+                                    Title : 
+                                    <input type="text" name="title" value={this.state.title} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                <br></br>
+
+                                
+
+                            
+                                    <label>
+                                        Interest : {this.state.interest}
+                                    </label>
+
+                                    {/* 낙찰계를 고르면 이율을 보여줌 */}
+                                    {/* {this.state.type === "낙찰계" &&
+
+                                        <label type="number" name="interest">
+                                            
+                                            Interest: {this.state.interest}
+                                        
+
+                                        </label>
+
+                                    } */}
+                                <br></br>
+
+                                <label>
+                                    Period : 
+                                    <input type="number" name="period" value={this.state.period} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                <label>
+                                    Target Money : 
+                                    <input type="number" name="targetMoney" value={this.state.targetMoney} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                <label>
+                                    Member : 
+                                    <input type="number" name="totalMember" value={this.state.totalMember} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                <label>
+                                    Turn : 
+                                    <input type="number" name="turn" value={this.state.turn} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                </div>
+                            </form>
+                               
+                            </p>
+                        </TabPane>
+                        <TabPane tabId="tabs2">
+                            <p className="description">
+                            <form>
+
+                                <label>
+                                    Type : 저축계                            
+                                </label>
+
+                                <div>
+
+                                <label>
+                                    Title : 
+                                    <input type="text" name="title" value={this.state.title} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                <br></br>
+
+
+                                <label>
+                                    Period : 
+                                    <input type="number" name="period" value={this.state.period} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                <label>
+                                    Target Money : 
+                                    <input type="number" name="targetMoney" value={this.state.targetMoney} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                <label>
+                                    Member : 
+                                    <input type="number" name="totalMember" value={this.state.totalMember} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                <label>
+                                    Turn : 
+                                    <input type="number" name="turn" value={this.state.turn} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                </div>
+                                </form>
+                                
+                            </p>
+                        </TabPane>
+                        <TabPane tabId="tabs3">
+                            <p className="description">
+                            <form>
+
+                                <label>
+                                    Type : 기부계                            
+                                </label>
+
+                                <div>
+
+                                <label>
+                                    Title : 
+                                    <input type="text" name="title" value={this.state.title} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                <br></br>
+
+
+                                <label>
+                                    Period : 
+                                    <input type="number" name="period" value={this.state.period} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                <label>
+                                    Target Money : 
+                                    <input type="number" name="targetMoney" value={this.state.targetMoney} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                <label>
+                                    Member : 
+                                    <input type="number" name="totalMember" value={this.state.totalMember} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                <label>
+                                    Turn : 
+                                    <input type="number" name="turn" value={this.state.turn} 
+                                        onChange={this.handleChange}/>
+                                </label>
+
+                                </div>
+                                </form>
+                            </p>
+                        </TabPane>
+                        </TabContent>
+                    </CardBody>
+                </Card>
+
+                <div>
+
+                    <form className="button_type">    
+
+
+                        <input className="buttontype" type="button" value="Submit" onClick={this.handleSubmit}/>
+
+                    </form>
+
+                </div>
+                
             </div>
         );
     }

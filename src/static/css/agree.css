@@ -81,6 +81,7 @@ ul.join_box{
 .agree_card{
     height: 1000px;
     width: 900px;
+    text-align: center;
     margin-top: 100px;
     margin-bottom: auto;
     background: #DDC2F4;

@@ -26,11 +26,18 @@ class GyeCreateComponent extends React.Component {
                   :e.target.value
             }
         )
+        //토탈멤버랑 기간이랑 같이 올라가게
         if(e.target.name === 'totalMember'){
-            this.state.interest = e.target.value;
+            this.state.period = e.target.value;
             console.log(e.target.value)
-
         }
+
+        if(e.target.name === 'period'){
+            this.state.totalMember = e.target.value;
+            console.log(e.target.value)
+        }
+
+
     }
 
     handleSubmit(e) {
@@ -81,7 +88,16 @@ class GyeCreateComponent extends React.Component {
 
                     <label type="number" name="interest">
 
-                        Interest: {this.state.interest}
+                        Interest:
+                        <select name="interest" value={this.state.interest} onChange={this.handleChange}>
+
+                            <option value="13">13%</option>
+                            <option value="14">14%</option>
+                            <option value="15">15%</option>
+                            <option value="16">16%</option>
+                            <option value="17">17%</option>
+
+                        </select>
 
                     </label>
 

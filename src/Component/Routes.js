@@ -18,7 +18,7 @@ import About from '../Pages/About';
 import Footer from '../Pages/Footer';
 import GyeSelect from '../Pages/gye/GyeSearch';
 import Board from '../Pages/Board';
-import Contact from '../Pages/Contact';
+import ContactUs from '../Pages/ContactUs';
 import GyeSearch from '../Pages/gye/GyeSearch';
 
 
@@ -53,11 +53,10 @@ class Routes extends React.Component {
                                 (props) => <Login {...props} userStateChange={this.handleUserState}/>}/>
                     <Route path="/RegisterForm" component={RegisterForm}/>
                     <Route path="/sign-up" component={agree}/>                   
-                    <Route path="/about" component={About}/>
-                    <Route path="/about" component={About}/>                    
+                    <Route path="/about" component={About}/>                                  
                     <Route path="/gye-list" component={GyeList}/> 
                     <Route path="/board" component={Board}/>
-                    <Route path="/contact" component={Contact}/>
+                    <Route path="/contactus" component={ContactUs}/>
                     <Route path="/search" component={GyeSearch}/>
 
                     <AuthenticatedRoute path="/mypage" component={MyPage}/>

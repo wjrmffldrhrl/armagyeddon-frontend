@@ -33,21 +33,21 @@ class GyeDetailsComponent extends React.Component {
             <li key={index}>{member.email} : {member.name} </li>)
         return (
             <div>
-                <div>
+                <div className="gyedetailform">
                     <h1>{gye.title}</h1>
                     <h2>Gye Mater : {gye.master}</h2>
                     <p>Type : {gye.type}</p>
                     <p>Target Money : {gye.targetMoney}</p>
                     <p>Total Member : {gye.totalMember}</p>
-                    <p>Period : {gye.period}month</p>
+                    <p>Period : {gye.period} month</p>
 
                     <h2>Member List</h2>
                     <ul>{memberList}</ul> 
                     
-                </div>
-                <div>
-                    <button className="btn btn-success">Join!</button>
-                    <GyeJoinComponent gyeId={gye.id} />
+                    <div>
+                        <button className="btn btn-success">Join!</button>
+                        <GyeJoinComponent gyeId={gye.id} />
+                    </div>
                 </div>
             </div>
              

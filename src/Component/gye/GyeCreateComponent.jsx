@@ -83,6 +83,7 @@ class GyeCreateComponent extends React.Component {
                         </select>
 
                     </label>
+
                     {/* 낙찰계를 고르면 이율을 보여줌 */}
                     {this.state.type === "낙찰계" &&
 
@@ -109,16 +110,53 @@ class GyeCreateComponent extends React.Component {
                         <input type="number" name="period" value={this.state.period} 
                             onChange={this.handleChange}/>
                     </label>
+
+
                     <label>
                         Target Money: 
                         <input type="number" name="targetMoney" value={this.state.targetMoney} 
                             onChange={this.handleChange}/>
                     </label>
+
+
+                    {/*저축계일 때 보여주는 멤버 수 */}
+
+                    {this.state.type === "저축계" &&
                     <label>
-                        Member: 
-                        <input type="number" name="totalMember" value={this.state.totalMember} 
-                            onChange={this.handleChange}/>
+                        Member:
+                        <input type="number" name="totalMember" value={this.state.totalMember}
+                               onChange={this.handleChange}/>
                     </label>
+                    }
+
+                    {/*낙찰계일 때 보여주는 멤버 수 */}
+
+                    {this.state.type === "낙찰계" &&
+
+
+                    <label type="number" name="totalMember">
+
+                        Member:
+                        <select name="totalMember" value={this.state.totalMember} onChange={this.handleChange}>
+
+                            <option value="3">3명</option>
+                            <option value="5">5명</option>
+                            <option value="7">7명</option>
+
+                        </select>
+
+                    </label>
+                    }
+
+
+
+
+
+
+
+
+
+
                     <label>
                         Turn: 
                         <input type="number" name="turn" value={this.state.turn} 

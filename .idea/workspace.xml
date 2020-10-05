@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2e996f2f-14ba-4c0e-a708-4f6f427047fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/gye/GyeDetailsComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/gye/GyeDetailsComponent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +91,7 @@
       <workItem from="1600728171871" duration="488000" />
       <workItem from="1601253123904" duration="3566000" />
       <workItem from="1601352913941" duration="3104000" />
-      <workItem from="1601864963396" duration="535000" />
+      <workItem from="1601864963396" duration="2492000" />
     </task>
     <servers />
   </component>
@@ -136,9 +135,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="208" y="43" key="SettingsEditor/1440.89.1112.811/0.23.1440.877@0.23.1440.877" timestamp="1599638105138" />
-    <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600132868421">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="691" y="426" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601865501805">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="691" y="426" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601865501805" />
     <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1600132868421" />
   </component>
 </project>

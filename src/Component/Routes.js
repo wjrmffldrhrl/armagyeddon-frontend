@@ -61,7 +61,7 @@ class Routes extends React.Component {
 
                     <AuthenticatedRoute path="/mypage" component={MyPage}/>
                     <AuthenticatedRoute path="/logout" component={Home}/>
-                    <AuthenticatedRoute path="/gye-list" component={GyeList}/>
+                    {/* <AuthenticatedRoute path="/gye-list" component={GyeList}/> */}
                     <AuthenticatedRoute path="/gye/:id" component={GyeDetails}/>
                     <AuthenticatedRoute path="/create-gye" component={GyeCreate}/>
                     <AuthenticatedRoute path="/management-gye/:id" component={GyeManagement}/>

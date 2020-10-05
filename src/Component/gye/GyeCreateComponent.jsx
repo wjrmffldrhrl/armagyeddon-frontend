@@ -44,7 +44,8 @@ class GyeCreateComponent extends React.Component {
         console.log(this.state.title, this.state.period, 
             this.state.state, this.state.targetMoney, 
             this.state.totalMember, this.state.interest, this.state.type, this.state.turn);
-            
+
+
         GyeService
         .createGye(this.state.title, this.state.period,
             this.state.state, this.state.targetMoney, 
@@ -105,20 +106,6 @@ class GyeCreateComponent extends React.Component {
                     }
 
 
-                    <label>
-                        Period: 
-                        <input type="number" name="period" value={this.state.period} 
-                            onChange={this.handleChange}/>
-                    </label>
-
-
-                    <label>
-                        Target Money: 
-                        <input type="number" name="targetMoney" value={this.state.targetMoney} 
-                            onChange={this.handleChange}/>
-                    </label>
-
-
                     {/*저축계일 때 보여주는 멤버 수 */}
 
                     {this.state.type === "저축계" &&
@@ -147,6 +134,47 @@ class GyeCreateComponent extends React.Component {
 
                     </label>
                     }
+
+
+                    {/*저축계일 때 보여주는 기간 */}
+
+                    {this.state.type === "저축계" &&
+                    <label>
+                        Period:
+                        <input type="number" name="period" value={this.state.period}
+                               onChange={this.handleChange}/>
+                    </label>
+                    }
+
+                    {/*낙찰계일 때 보여주는 기간 */}
+
+                    {this.state.type === "낙찰계" &&
+
+
+                    <label type="number" name="period">
+
+                        Period:
+                        <select name="period" value={this.state.period} onChange={this.handleChange}>
+
+                            <option value="3">3개월</option>
+                            <option value="5">5개월</option>
+                            <option value="7">7개월</option>
+
+                        </select>
+
+                    </label>
+                    }
+
+
+
+                    <label>
+                        Target Money: 
+                        <input type="number" name="targetMoney" value={this.state.targetMoney} 
+                            onChange={this.handleChange}/>
+                    </label>
+
+
+
 
 
 

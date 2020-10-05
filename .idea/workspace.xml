@@ -21,9 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e996f2f-14ba-4c0e-a708-4f6f427047fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/animation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/gye/GyeCreateComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/gye/GyeCreateComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/GyeService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/GyeService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/gye/GyeDetailsComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/gye/GyeDetailsComponent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +92,7 @@
       <workItem from="1600728171871" duration="488000" />
       <workItem from="1601253123904" duration="3566000" />
       <workItem from="1601352913941" duration="3104000" />
+      <workItem from="1601864963396" duration="535000" />
     </task>
     <servers />
   </component>

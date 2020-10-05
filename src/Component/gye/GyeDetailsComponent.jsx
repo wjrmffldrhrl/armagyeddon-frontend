@@ -41,6 +41,11 @@ class GyeDetailsComponent extends React.Component {
                     <p>Total Member : {gye.totalMember}</p>
                     <p>Period : {gye.period}month</p>
 
+                    {/*낙찰계일 때 이율 보여줌 */}
+                    {gye.type === "낙찰계" &&
+                    <p>Interest : {gye.interest} %</p>
+                    }
+
                     <h2>Member List</h2>
                     <ul>{memberList}</ul> 
                     

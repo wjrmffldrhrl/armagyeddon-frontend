@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e996f2f-14ba-4c0e-a708-4f6f427047fd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/gye/GyeManagementComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/gye/GyeManagementComponent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,10 +117,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="827" y="410" key="#ESLint" timestamp="1601966843596">
+    <state x="827" y="410" key="#ESLint" timestamp="1601972853069">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="827" y="410" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1601966843596" />
+    <state x="827" y="410" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1601972853069" />
     <state width="1530" height="265" key="GridCell.Tab.0.bottom" timestamp="1601353595911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

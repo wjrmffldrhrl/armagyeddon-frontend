@@ -128,14 +128,15 @@ class GyeManagementComponent extends React.Component {
 
         for (let i = 0; i < this.state.members.length; i++) {
             const member = this.state.members[i];
-
-            if (gye.type === "저축계") {
             const response = await
                 ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney);
+
+            if (gye.type === "저축계") {
+
             } else if(gye.type === "낙찰계") {
                 if (gye.totalMember === 3){
-                    const response =
-                        await ArmaTokenService.sendTokenToGye(member.email, gye.id, collectInterestMoney);
+
+
                 }else if (gye.totalMember === 5){
 
                 }else if (gye.totalMember === 7){
@@ -152,7 +153,9 @@ class GyeManagementComponent extends React.Component {
             // .catch(error => {
             //     alert(member.email + ' error!');
             // });
+
             console.log(response.data);
+
 
         }
 

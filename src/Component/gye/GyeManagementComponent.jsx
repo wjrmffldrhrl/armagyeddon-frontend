@@ -134,7 +134,8 @@ class GyeManagementComponent extends React.Component {
                 ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney);
             } else if(gye.type === "낙찰계") {
                 if (gye.totalMember === 3){
-
+                    const response =
+                        await ArmaTokenService.sendTokenToGye(member.email, gye.id, collectInterestMoney);
                 }else if (gye.totalMember === 5){
 
                 }else if (gye.totalMember === 7){

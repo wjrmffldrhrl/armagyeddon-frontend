@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e996f2f-14ba-4c0e-a708-4f6f427047fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/gye/GyeManagementComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/gye/GyeManagementComponent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +96,7 @@
       <workItem from="1601352913941" duration="3104000" />
       <workItem from="1601864963396" duration="2492000" />
       <workItem from="1601877573521" duration="7647000" />
-      <workItem from="1601949069601" duration="5195000" />
+      <workItem from="1601949069601" duration="5362000" />
     </task>
     <servers />
   </component>

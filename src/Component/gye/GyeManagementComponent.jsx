@@ -73,11 +73,79 @@ class GyeManagementComponent extends React.Component {
         // console.log(this.state.members);
 
 
+        //낙찰계 수금
+        let collectInterestMoney = [
+            //공통적으로 내는 돈 + 이자
+            //3명일때 1번째 사람
+            // (gye.targetMoney / gye.totalMember) + ((gye.targetMoney * (gye.interest-1) / 100) / 12 * gye.period)
+
+            //3명일때 2번째 사람
+            // (gye.targetMoney / gye.totalMember)
+
+            //3명일때 3번째 사람
+            // (gye.targetMoney / gye.totalMember) - ((gye.targetMoney * (gye.interest) / 100) / 12 * gye.period)
+
+            //5명일때 1번째 사람
+            // (gye.targetMoney / gye.totalMember) + ((gye.targetMoney * (gye.interest-2) / 100) / 12 * gye.period)
+
+            //5명일때 2번째 사람
+            // (gye.targetMoney / gye.totalMember) + ((gye.targetMoney * (gye.interest / 2 -1) / 100) / 12 * gye.period)
+
+            //5명일때 3번째 사람
+            // (gye.targetMoney / gye.totalMember)
+
+            //5명일때 4번째 사람
+            // (gye.targetMoney / gye.totalMember) - ((gye.targetMoney * (gye.interest / 2) / 100) / 12 * gye.period)
+
+            //5명일때 5번째 사람
+            // (gye.targetMoney / gye.totalMember) - ((gye.targetMoney * (gye.interest) / 100) / 12 * gye.period)
+
+
+            //7명일때 1번째 사람
+            // (gye.targetMoney / gye.totalMember) + ((gye.targetMoney * (gye.interest - 1 /3 ) / 100) / 12 * gye.period)
+
+            //7명일때 2번째 사람
+            // (gye.targetMoney / gye.totalMember) + ((gye.targetMoney * (2 * (gye.interest) / 3 - 1 /2 ) / 100) / 12 * gye.period)
+
+            //7명일때 3번째 사람
+            //  (gye.targetMoney / gye.totalMember) + ((gye.targetMoney * (gye.interest / 3 -1) / 100) / 12 * gye.period)
+
+            //7명일때 4번째 사람
+            // (gye.targetMoney / gye.totalMember)
+
+            //7명일때 5번째 사람
+            // (gye.targetMoney / gye.totalMember) - ((gye.targetMoney * (gye.interest / 3) / 100) / 12 * gye.period)
+
+            //7명일때 6번째 사람
+            // (gye.targetMoney / gye.totalMember) - ((gye.targetMoney * (2 * (gye.interest / 3)) / 100) / 12 * gye.period)
+
+            //7명일때 7번째 사람
+            // (gye.targetMoney / gye.totalMember) - ((gye.targetMoney * (gye.interest) / 100) / 12 * gye.period)
+
+            // 인원수 // 이자율 // 해당인원의 금액
+        ]
+
+
         for (let i = 0; i < this.state.members.length; i++) {
             const member = this.state.members[i];
-
             const response = await
                 ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney);
+
+            if (gye.type === "저축계") {
+
+            } else if(gye.type === "낙찰계") {
+                if (gye.totalMember === 3){
+
+
+                }else if (gye.totalMember === 5){
+
+                }else if (gye.totalMember === 7){
+
+                }
+
+
+            }
+
 
             // .then( (response) => {
             //     console.log(member.email + ' send!');
@@ -85,14 +153,16 @@ class GyeManagementComponent extends React.Component {
             // .catch(error => {
             //     alert(member.email + ' error!');
             // });
+
             console.log(response.data);
+
 
         }
 
         // this.state.members.forEach(async (member) => {
 
 
-        //     const response = await 
+        //     const response = await
         //         ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney);
 
         //         // .then( (response) => {

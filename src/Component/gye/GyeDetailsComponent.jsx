@@ -30,12 +30,12 @@ class GyeDetailsComponent extends React.Component {
     render() {
         let gye = this.state.gye;
         const memberList = this.state.members.map((member, index) =>
-            <li key={index}>{member.email} : {member.name} </li>)
+            <li key={index}>순서 {member.turn}번 : {member.email} : {member.name} </li>)
         return (
             <div>
                 <div>
                     <h1>{gye.title}</h1>
-                    <h2>Gye Mater : {gye.master}</h2>
+                    <h2>Gye Master : {gye.master}</h2>
                     <p>Type : {gye.type}</p>
                     <p>Target Money : {gye.targetMoney}</p>
                     <p>Total Member : {gye.totalMember}</p>

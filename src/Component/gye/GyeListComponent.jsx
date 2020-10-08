@@ -17,6 +17,7 @@ class GyeListComponent extends React.Component {
             this.setState({gyes: response.data});
         })
         .catch(error => {
+            console.log(error)
 
         })
     }
@@ -27,6 +28,7 @@ class GyeListComponent extends React.Component {
             <div className="col-md-6 col-lg-4 mb-5" key={gye.id}>
                 <a href={'/gye/' + gye.id}><img src="images/cute.jpg" alt="Image" className="img-fluid rounded mb-4"/></a>
                 <h3><a href={'/gye/' + gye.id} className="text-black">{gye.title}</a></h3>
+                
                 <div>April 15, 2019 <span className="mx-2">|</span> <a href="#">2 Comments</a></div>
             </div>
         );
@@ -42,23 +44,7 @@ class GyeListComponent extends React.Component {
                     <div className="container">
                         <div className="row mb-5">
                             {listItem}
-                        </div>
-
-                        <div className="row pagination-wrap mt-5">
-                        
-                            <div className="col-md-12 text-center ">
-                                <div className="custom-pagination ml-auto">
-                                    <a href="#" className="prev">Prev</a>
-                                        <div className="d-inline-block">
-                                            <a href="#" className="active">1</a>
-                                            <a href="#">2</a>
-                                            <a href="#">3</a>
-                                            <a href="#">4</a>
-                                        </div>
-                                    <a href="#" className="next">Next</a>
-                                </div>
-                            </div>
-                        </div>
+                        </div>                        
                     </div>
                 </section>         
                 

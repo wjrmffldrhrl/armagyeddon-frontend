@@ -69,7 +69,7 @@ class ContactUsComponent extends React.Component {
                         <label htmlFor="message">Message</label>
                         <textarea className="form-control" rows="5"></textarea>
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn_contact_submit">Submit</button>
                 </form>
 
             </div>

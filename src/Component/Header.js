@@ -60,7 +60,7 @@ class Header extends React.Component {
                                     Board
                                 </Link></a><a></a><a></a>    
 
-                                <a><Link to="/contactus" className="text-white font-weight-bold">
+                                <a><Link to="/contact" className="text-white font-weight-bold">
                                     Contact Us
                                 </Link></a><a></a><a></a>                              
                                                               
@@ -108,7 +108,7 @@ class Header extends React.Component {
                                     Search
                                  </Link></a><a></a><a></a><a></a>     
 
-                                <a><Link to="/contactus" className="text-white font-weight-bold">
+                                <a><Link to="/contact" className="text-white font-weight-bold">
                                     Contact Us
                                 </Link></a><a></a><a></a>                        
                                                        

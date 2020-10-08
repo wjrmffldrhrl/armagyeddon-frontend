@@ -1,5 +1,7 @@
 import React from 'react';
 import GyeListComponent from '../../Component/gye/GyeListComponent';
+import GyeSearchComponent from '../../Component/gye/GyeSearchComponent';
+
 import { Link } from "react-router-dom";
 import style from '../../static/css/gye.css';
 
@@ -9,15 +11,19 @@ class GyeList extends React.Component {
         return (
              <div class='gyelist'>
 
-                 <div class='gyetitle'>
+                
+                <GyeSearchComponent></GyeSearchComponent>
 
-                    <h1>Armagyeddon Gye List
-                    
+                <hr></hr>
+                <div class='gyetitle'>
+
+                    <h1>Armagyeddon Gye List                    
                     <Link to="/create-gye" className="btn btn-success">create gye</Link></h1>
-                 </div>
+                </div>
+                
+                <GyeListComponent/>
 
-                    <hr></hr>
-                 <GyeListComponent/>
+
              </div>
         );
     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import GyeService from '../../services/GyeService';
 
+
 class GyeSearchComponent extends React.Component {
 
     constructor(props) {
@@ -24,11 +25,14 @@ class GyeSearchComponent extends React.Component {
     render() {
 
         return(
+            <div>
+                <hr></hr>
             <div class="container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-md-12">
                             <div class="mb-5 text-center">
                                 <h1 class="text-black font-weight-bold">아마곗돈을 경험해보세요</h1>
+                                
                                 <p></p>
                                 <p>블록체인 기반 계모임 플렛폼 Aramagyeddon에서 당신의 안전한 계모임을 생성하고 사람들을 모아보세요 </p>
                                 <p>변경 불가능한 장부를 자동으로 생성하여 여러분의 곗돈을 안전하게 지켜드립니다.</p>
@@ -61,21 +65,12 @@ class GyeSearchComponent extends React.Component {
                                 </div>
                             </div>
     
-                            <div class="row">
-                                    <div class="col-md-12 popular-keywords">
-                                    <h3>Popular Gye</h3>
-                                        <ul class="keywords list-unstyled m-0 p-0">
-                                            <li><a href="#" class="">노트북계</a></li>
-                                            <li><a href="#" class="">코로나 끝나고</a></li>
-                                            <li><a href="#" class="">목돈모으기</a></li>
-                                        </ul>
-                                    </div>
-                            </div>
+                            
                         </form>
                     </div>
                 </div>
             </div>
-    
+            </div>
         );
 
     }

@@ -100,7 +100,7 @@ class Login extends React.Component {
                                 Don't have an account? <a href="/sign-up" className="ml-2">Sign Up</a>
                             </div>
                             <div className="d-flex justify-content-center links">
-                                <a href="#">Forgot your password?</a>
+                                <a href="/searchpw">Forgot your password?</a>
                             </div>
                         </div>
                     </div>

@@ -15,7 +15,10 @@
 }
 
 .btn_contact_submit {
-    background-color: #DDC2F4;
-    border-color: #DDC2F4;
-    margin-left: 200px;
+    color: #BF94E4;
+    border-radius: 4px;
+    margin-left: 50px;
+    margin-top: 60px;
+    cursor: pointer;
+    padding: 5px;
 }

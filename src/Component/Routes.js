@@ -20,6 +20,7 @@ import GyeSelect from '../Pages/gye/GyeSearch';
 import Board from '../Pages/Board';
 import ContactUs from '../Pages/ContactUs';
 import GyeSearch from '../Pages/gye/GyeSearch';
+import PWSearch from '../Pages/PWSearch';
 
 
 
@@ -58,6 +59,7 @@ class Routes extends React.Component {
                     <Route path="/board" component={Board}/>
                     <Route path="/contactus" component={ContactUs}/>
                     <Route path="/search" component={GyeSearch}/>
+                    <Route path="/searchpw" component={PWSearch}/>
 
                     <AuthenticatedRoute path="/mypage" component={MyPage}/>
                     <AuthenticatedRoute path="/logout" component={Home}/>

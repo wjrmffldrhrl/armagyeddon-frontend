@@ -58,18 +58,26 @@ class GyeCreateComponent extends React.Component {
                   :e.target.value
             }
         )
+        //토탈멤버랑 기간이랑 같이 올라가게
         if(e.target.name === 'totalMember'){
-            this.state.interest = e.target.value;
+            this.state.period = e.target.value;
             console.log(e.target.value)
-
         }
+
+        if(e.target.name === 'period'){
+            this.state.totalMember = e.target.value;
+            console.log(e.target.value)
+        }
+
+
     }
 
     handleSubmit(e) {
         console.log(this.state.title, this.state.period, 
             this.state.state, this.state.targetMoney, 
             this.state.totalMember, this.state.interest, this.state.type, this.state.turn);
-            
+
+
         GyeService
         .createGye(this.state.title, this.state.period,
             this.state.state, this.state.targetMoney, 
@@ -324,7 +332,6 @@ class GyeCreateComponent extends React.Component {
                     </form>
 
                 </div>
-                
             </div>
         );
     }

@@ -21,9 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e996f2f-14ba-4c0e-a708-4f6f427047fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/animation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/gye/GyeCreateComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/gye/GyeCreateComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/GyeService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/GyeService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/gye/GyeDetailsComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/gye/GyeDetailsComponent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,14 +45,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -94,6 +96,11 @@
       <workItem from="1600728171871" duration="488000" />
       <workItem from="1601253123904" duration="3566000" />
       <workItem from="1601352913941" duration="3104000" />
+      <workItem from="1601864963396" duration="2492000" />
+      <workItem from="1601877573521" duration="7647000" />
+      <workItem from="1601949069601" duration="5362000" />
+      <workItem from="1602036732809" duration="58000" />
+      <workItem from="1602036880758" duration="2508000" />
     </task>
     <servers />
   </component>
@@ -113,6 +120,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="827" y="410" key="#ESLint" timestamp="1601972853069">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="827" y="410" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1601972853069" />
+    <state x="605" y="238" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602036743313">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="605" y="238" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602036743313" />
     <state width="1530" height="265" key="GridCell.Tab.0.bottom" timestamp="1601353595911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -137,9 +152,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="208" y="43" key="SettingsEditor/1440.89.1112.811/0.23.1440.877@0.23.1440.877" timestamp="1599638105138" />
-    <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600132868421">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="691" y="426" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601865501805">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="691" y="426" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601865501805" />
     <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1600132868421" />
   </component>
 </project>

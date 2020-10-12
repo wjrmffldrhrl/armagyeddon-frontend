@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e996f2f-14ba-4c0e-a708-4f6f427047fd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/gye/GyeCreateComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/gye/GyeCreateComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/gye/GyeManagementComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/gye/GyeManagementComponent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +66,19 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -102,7 +116,7 @@
       <workItem from="1601949069601" duration="5362000" />
       <workItem from="1602036732809" duration="58000" />
       <workItem from="1602036880758" duration="2508000" />
-      <workItem from="1602462765545" duration="5156000" />
+      <workItem from="1602462765545" duration="13354000" />
     </task>
     <servers />
   </component>
@@ -122,10 +136,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="827" y="410" key="#ESLint" timestamp="1601972853069">
+    <state x="827" y="410" key="#ESLint" timestamp="1602480569767">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="827" y="410" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1601972853069" />
+    <state x="827" y="410" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1602480569767" />
     <state x="605" y="238" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602036743313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

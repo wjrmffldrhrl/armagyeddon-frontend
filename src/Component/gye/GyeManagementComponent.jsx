@@ -68,33 +68,30 @@ class GyeManagementComponent extends React.Component {
         alert('collect!');
         let gye = this.state.gye;
         let collectMoney = gye.targetMoney / (gye.totalMember - 1);
+
+            for (let i = 0; i < this.state.members.length; i++)
+            {
+                const member = this.state.members[i];
+                const response = await
+                    ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney);
+            }
+
+            console.log(response.data);
+    }
+
+
+
+
         // console.log(collectMoney);
         // console.log(gye.targetMoney);
         // console.log(this.state.members);
 
 
-        //낙찰계 수금
 
 
-        for (let i = 0; i < this.state.members.length; i++) {
-            const member = this.state.members[i];
-            const response = await
-                ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney);
-
-            if (gye.type === "저축계") {
-
-            } else if(gye.type === "낙찰계") {
-                if (gye.totalMember === 3){
 
 
-                }else if (gye.totalMember === 5){
 
-                }else if (gye.totalMember === 7){
-
-                }
-
-
-            }
 
 
             // .then( (response) => {
@@ -104,10 +101,7 @@ class GyeManagementComponent extends React.Component {
             //     alert(member.email + ' error!');
             // });
 
-            console.log(response.data);
 
-
-        }
 
         // this.state.members.forEach(async (member) => {
 
@@ -129,7 +123,7 @@ class GyeManagementComponent extends React.Component {
 
         // e.preventDefault();
 
-    }
+
 
     handleSendToken(e) {
         console.log(e);

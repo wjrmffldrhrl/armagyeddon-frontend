@@ -69,6 +69,16 @@ class GyeCreateComponent extends React.Component {
             console.log(e.target.value)
         }
 
+        if(e.target.name === 'interest'){
+            if(this.state.interest > 20 && this.state.interest < 1){
+                alert("between 1 and 20!")
+            }
+
+
+        }
+
+
+
 
     }
 
@@ -102,12 +112,14 @@ class GyeCreateComponent extends React.Component {
 
 
                 <div className="nav-wrapper">
+
                     <Nav
                         className="nav-fill flex-column flex-md-row"
                         id="tabs-icons-text"
                         pills
                         role="tablist"
                     >
+
                         <NavItem>
                             <NavLink
                                 aria-selected={this.state.tabs === 1}
@@ -122,6 +134,7 @@ class GyeCreateComponent extends React.Component {
                                 낙찰계
                             </NavLink>
                         </NavItem>
+
                         <NavItem>
                             <NavLink
                                 aria-selected={this.state.tabs === 2}
@@ -136,6 +149,7 @@ class GyeCreateComponent extends React.Component {
                                 저축계
                             </NavLink>
                         </NavItem>
+
                         <NavItem>
                             <NavLink 
                                 aria-selected={this.state.tabs === 3}
@@ -150,6 +164,7 @@ class GyeCreateComponent extends React.Component {
                                 기부계
                             </NavLink>
                         </NavItem>
+
                     </Nav>
                 </div>
 
@@ -178,20 +193,14 @@ class GyeCreateComponent extends React.Component {
 
                             
                                     <label>
-                                        Interest : {this.state.interest}
+                                        Interest(between 1 and 20) :
+                                        <input type="number" name="interest"
+                                               min="1" max="20"
+                                               value={this.state.interest}
+                                               onChange={this.handleChange}/>
                                     </label>
 
-                                    {/* 낙찰계를 고르면 이율을 보여줌 */}
-                                    {/* {this.state.type === "낙찰계" &&
 
-                                        <label type="number" name="interest">
-                                            
-                                            Interest: {this.state.interest}
-                                        
-
-                                        </label>
-
-                                    } */}
                                 <br></br>
 
                                 <label>
@@ -202,7 +211,7 @@ class GyeCreateComponent extends React.Component {
 
                                 <label>
                                     Target Money : 
-                                    <input type="number" name="targetMoney" value={this.state.targetMoney} 
+                                    <input type="number" name="targetMoney" step={10000} value={this.state.targetMoney}
                                         onChange={this.handleChange}/>
                                 </label>
 
@@ -223,6 +232,8 @@ class GyeCreateComponent extends React.Component {
                                
                             </p>
                         </TabPane>
+
+
                         <TabPane tabId="tabs2">
                             <p className="description">
                             <form>
@@ -250,7 +261,7 @@ class GyeCreateComponent extends React.Component {
 
                                 <label>
                                     Target Money : 
-                                    <input type="number" name="targetMoney" value={this.state.targetMoney} 
+                                    <input type="number" name="targetMoney" step={10000} value={this.state.targetMoney}
                                         onChange={this.handleChange}/>
                                 </label>
 
@@ -298,7 +309,7 @@ class GyeCreateComponent extends React.Component {
 
                                 <label>
                                     Target Money : 
-                                    <input type="number" name="targetMoney" value={this.state.targetMoney} 
+                                    <input type="number" name="targetMoney" step={10000} value={this.state.targetMoney}
                                         onChange={this.handleChange}/>
                                 </label>
 

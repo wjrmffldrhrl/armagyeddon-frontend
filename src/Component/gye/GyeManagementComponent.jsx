@@ -63,38 +63,25 @@ class GyeManagementComponent extends React.Component {
 
             });
     }
+    //잠시 삭제
+    // async handleCollect(e) {
+    //     alert('collect!');
 
-    async handleCollect(e) {
-        alert('collect!');
-        console.log(this.state.targetMoney, this.state.totalMember, this.state.interest);
-
-        if(this.state.type === "낙찰계") {
-            await ArmaTokenService.collectTokenToGye(
-                this.state.targetMoney,
-                this.state.totalMember,
-                this.state.interest
-            );
-
-        }else{
-            let gye = this.state.gye;
-            let collectMoney = gye.targetMoney / (gye.totalMember - 1);
-
-            for (let i = 0; i < this.state.members.length; i++)
-            {
-                const member = this.state.members[i];
-                const response = await
-                    ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney);
-            }
-
-
-
-        }
-
-
-            console.log(response.data);
-
-
-    }
+    //         let gye = this.state.gye;
+    //         let collectMoney = gye.targetMoney / (gye.totalMember - 1);
+    //
+    //         for (let i = 0; i < this.state.members.length; i++)
+    //         {
+    //             const member = this.state.members[i];
+    //             const response = await
+    //                 ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney);
+    //         }
+    //
+    //
+    //         console.log(response.data);
+    //
+    //
+    // }
 
 
 

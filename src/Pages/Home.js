@@ -4,6 +4,7 @@ import styles from '../static/css/index.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import {Link} from 'react-router-dom';
 import FriendsComponent from '../Component/home/FriendsComponet';
+import MainpageComponent from '../Component/home/MainpageComponent';
 
 class Index extends React.Component {
     render() {
@@ -37,7 +38,11 @@ class Index extends React.Component {
                     </div>
 
                  
-                </div>   
+                </div> 
+
+                <div>
+                    <MainpageComponent></MainpageComponent>    
+                </div>  
 
                 <div>
 

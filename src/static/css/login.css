@@ -133,3 +133,47 @@ label {
     width: 300px;
     margin-left: 250px;
 }
+
+.search_pw {
+    width: 50%;
+}
+.search_pw_write_email {
+    margin-left: 5px;
+    padding: 5px;
+    width: 60%;
+}
+.Search_div {
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+   
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+.input[name=search_pw_id], input[name=search_pw_email] { 
+    width : 50% 
+}
+
+
+.input[name=search_pw_write_email] { 
+    margin-left: 5px; 
+    padding: 5px;
+    width: 60%;
+}
+
+.input[name=search_pw_submit] {
+    border: solid 1px #ababab;
+    border-radius: 4px;
+    margin-left: 50px;
+    margin-top: 60px;
+    cursor: pointer;
+    padding: 5px;
+}
+

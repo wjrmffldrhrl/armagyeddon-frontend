@@ -6,10 +6,17 @@ import {Link} from 'react-router-dom';
 import FriendsComponent from '../Component/home/FriendsComponet';
 import MainpageComponent from '../Component/home/MainpageComponent';
 
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css'
+
+
+
 class Index extends React.Component {
     render() {
         return(
             <div>
+               
                 <div id="home" className="section bg-voilet bg-overlay overflow-hidden d-flex align-items-center">
                     <div className="container">
                     
@@ -36,9 +43,55 @@ class Index extends React.Component {
                             </div>
                         </div>
                     </div>
-
+ 
                  
                 </div> 
+
+                <div className="container">
+
+                    <div className="content">
+                        <h3> 아마곗돈은요</h3>
+
+                       
+                        <figure className="figure">
+                        <img src="/images/id.png" className="figure-img img-fluid z-depth-1"
+                        alt="" style={{width: '300px'}} />
+                        <figcaption className="figure-caption">
+                         <h4>계주와 계원의 신원보증</h4>
+                        </figcaption>
+                        </figure>
+                                            
+                        <figure className="figure">
+                        <img src="/images/rates.png" className="figure-img img-fluid z-depth-1"
+                        alt="" style={{width: '300px'}} />
+                        <figcaption className="figure-caption">
+                        <h4>금융기관보다 높은 이자율</h4>
+                        </figcaption>
+                        </figure>
+
+                        <figure className="figure">
+                        <img src="/images/tokenchange.png" className="figure-img img-fluid z-depth-1"
+                        alt="" style={{width: '300px'}} />
+                        <figcaption className="figure-caption">
+                        <h4>간편한 토큰 결제</h4> 
+                        </figcaption>
+                        </figure>
+
+
+                    </div>
+
+
+                </div>
+
+                <div className="middlebox">
+
+
+                </div>
+{/* 
+                <div>
+                       
+                    
+                </div>
 
                 <div>
                     <MainpageComponent></MainpageComponent>    
@@ -48,38 +101,12 @@ class Index extends React.Component {
 
                     <FriendsComponent>메롱메롱</FriendsComponent>
 
-                </div>                                  
+                </div>                                   */}
              
 
-                {/* <div className="container">
-                    <div className="row"> 
-                        <div className="col-lg-6 align-self-center text-center text-lg-left">
-                            <blockquote>
-                            <p>아마곗돈을 통해서 목돈 마련했어요! 여행자금으로 모으고 있는데 코로나19 끝나면 유럽갈거에요.</p>
-                            <p><cite> JuHyun Lee</cite></p>
-                            </blockquote>
-                        </div>
-                        <div className="col-lg-6 align-self-end text-center text-lg-right">
-                            <img src="images/cute.jpg" alt="Image" className="img-fluid mb-0"/>
-                        </div>
-                    </div>
-                    
-                </div>  
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 align-self-center text-center text-lg-left">
-                            <blockquote>
-                            <p>&ldquo;돈 모으는 재미로 취준생활 이겨내고 있습니다. 취뽀해서 놀러갈거에요 ^__^&rdquo;</p>
-                            <p><cite> &mdash; MinHyeok</cite></p>
-                            </blockquote>
-                        </div>
-                    <div class="col-lg-6 align-self-end text-center text-lg-right">
-                        <img src="images/chippo.jpg" alt="Image" class="img-fluid mb-0"/>
-                    </div>
-                    </div>
-                </div> */}
+       
  
-                <div class="logoplustext">
+                {/* <div class="logoplustext">
                     <div class="text-center">               
                                 <h2 class="section-title mb-2">아마곗돈 제휴업체</h2>
                                 <p class="lead">아마곗돈 회원이라면 아마토큰으로 특가를 누리세요 </p>
@@ -104,7 +131,7 @@ class Index extends React.Component {
                         
                         
                     </div>                       
-                </div>              
+                </div>               */}
                 
             </div>
         );

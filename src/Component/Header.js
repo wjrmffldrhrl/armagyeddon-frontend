@@ -61,7 +61,7 @@ class Header extends React.Component {
                                 </Link></a><a></a><a></a>    
 
                                 <a><Link to="/contactus" className="text-white font-weight-bold">
-                                    Contact Us
+                                    Contact
                                 </Link></a><a></a><a></a>                              
                                                               
                                                  
@@ -104,12 +104,16 @@ class Header extends React.Component {
                                     Gye
                                 </Link></a><a></a><a></a>
 
-                                <a><Link to="/search" className="text-white font-weight-bold">
+                                {/* <a><Link to="/search" className="text-white font-weight-bold">
                                     Search
-                                 </Link></a><a></a><a></a><a></a>     
+                                 </Link></a><a></a><a></a><a></a>      */}
+
+                                <a><Link to="/board" className="text-white font-weight-bold">
+                                    Board
+                                </Link></a><a></a><a></a>  
 
                                 <a><Link to="/contactus" className="text-white font-weight-bold">
-                                    Contact Us
+                                    Contact
                                 </Link></a><a></a><a></a>                        
                                                        
                             </div> 

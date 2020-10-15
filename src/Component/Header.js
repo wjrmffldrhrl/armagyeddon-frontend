@@ -44,7 +44,7 @@ class Header extends React.Component {
                             <div>
 
 
-                                <a><Link to="/" className="text-white font-weight-bold">
+                                <a><Link to="/home" className="text-white font-weight-bold">
                                     Home
                                 </Link></a><a></a><a></a>
                                 
@@ -92,7 +92,7 @@ class Header extends React.Component {
                        
                        <div className="button-group store-buttons d-flex">
                             <div>
-                                <a><Link to="/" className="text-white font-weight-bold">
+                                <a><Link to="/home" className="text-white font-weight-bold">
                                     Home
                                 </Link></a><a></a><a></a>
 

@@ -10,9 +10,13 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css'
 
+import { MDBRow, MDBCol, MDBIcon } from "mdbreact";
+
 
 
 class Index extends React.Component {
+
+    
     render() {
         return(
             <div>
@@ -47,43 +51,108 @@ class Index extends React.Component {
                  
                 </div> 
 
-                <div className="container">
+                
 
-                    <div className="content">
-                        <h3> 아마곗돈은요</h3>
+                <div>
 
+                <section className="my-5">
+                    <h2 className="h1-responsive font-weight-bold text-center my-5">
+                        Why is it so great?
+                        </h2>
+                    <p className="lead grey-text w-responsive text-center mx-auto mb-5">
+                        왜 아마곗돈을 사용할까요?
+                        </p>
+
+                    <div className="main_card">
+                    <MDBRow>
+                        <MDBCol md="3">
+                        <MDBRow className="mb-3">
+                            <MDBCol size="2">
+                            <MDBIcon
+                                icon="flag-checkered"
+                                size="2x"
+                                className="deep-purple-text"
+                            />
+                            </MDBCol>
+                            <MDBCol size="10">
+                            <h5 className="font-weight-bold mb-3">International</h5>
+                            <p className="grey-text">
+                                아마토큰 결제로 전세계 회원이 가능해요.
+                                </p>
+                            </MDBCol>
+                        </MDBRow>
+                        <MDBRow className="mb-3">
+                            <MDBCol size="2">
+                            <MDBIcon icon="flask" size="2x" className="deep-purple-text" />
+                            </MDBCol>
+                            <MDBCol size="10">
+                            <h5 className="font-weight-bold mb-3">Experimental</h5>
+                            <p className="grey-text">
+                                블록체인 신기술을 활용한 안전한 서비스.
+                                </p>
+                            </MDBCol>
+                        </MDBRow>
+                        <MDBRow className="mb-3">
+                            <MDBCol size="2">
+                            <MDBIcon icon="glass-martini" size="2x" className="deep-purple-text" />
+                            </MDBCol>
+                            <MDBCol size="10">
+                            <h5 className="font-weight-bold mb-3">Relaxing</h5>
+                            <p className="grey-text">
+                                사회적 거리두기에도 사람들과 커뮤니티가 가능해요.
+                                </p>
+                            </MDBCol>
+                        </MDBRow>
+                        </MDBCol>
+                        
+                        <MDBCol md="4" className="text-name">
+                        <img
+                            className="img-fluid"
+                            src="images/icon.png"
+                            alt=""
+                        />
+                        </MDBCol>
+                      
+                        <MDBCol md="4">
+                        <MDBRow className="mb-3">
+                            <MDBCol size="2">
+                            <MDBIcon icon="heart" size="2x" className="deep-purple-text" />
+                            </MDBCol>
+                            <MDBCol size="10">
+                            <h5 className="font-weight-bold mb-3">Beloved</h5>
+                            <p className="grey-text">
+                                모든 회원들이 사랑하는 아마곗돈 서비스.
+                                </p>
+                            </MDBCol>
+                        </MDBRow>
+                        <MDBRow className="mb-3">
+                            <MDBCol size="2">
+                            <MDBIcon icon="bolt" size="3x" className="deep-purple-text" />
+                            </MDBCol>
+                            <MDBCol size="10">
+                            <h5 className="font-weight-bold mb-3">Rapid</h5>
+                            <p className="grey-text">
+                                빠르게 성장하고 있는 아마곗돈 서비스.
+                                </p>
+                            </MDBCol>
+                        </MDBRow>
+                        <MDBRow className="mb-3">
+                            <MDBCol size="2">
+                            <MDBIcon icon="magic" size="2x" className="deep-purple-text" />
+                            </MDBCol>
+                            <MDBCol size="10">
+                            <h5 className="font-weight-bold mb-3">Magical</h5>
+                            <p className="grey-text">
+                                원하는 이자율과 순번 선택이 가능해요.
+                                </p>
+                            </MDBCol>
+                        </MDBRow>
+                        </MDBCol>
                        
-                        <figure className="figure">
-                        <img src="/images/id.png" className="figure-img img-fluid z-depth-1"
-                        alt="" style={{width: '300px'}} />
-                        <figcaption className="figure-caption">
-                         <h4>계주와 계원의 신원보증</h4>
-                        </figcaption>
-                        </figure>
-                                            
-                        <figure className="figure">
-                        <img src="/images/rates.png" className="figure-img img-fluid z-depth-1"
-                        alt="" style={{width: '300px'}} />
-                        <figcaption className="figure-caption">
-                        <h4>금융기관보다 높은 이자율</h4>
-                        </figcaption>
-                        </figure>
-
-                        <figure className="figure">
-                        <img src="/images/tokenchange.png" className="figure-img img-fluid z-depth-1"
-                        alt="" style={{width: '300px'}} />
-                        <figcaption className="figure-caption">
-                        <h4>간편한 토큰 결제</h4> 
-                        </figcaption>
-                        </figure>
-
-
+                    </MDBRow>
+                    
                     </div>
-
-
-                </div>
-
-                <div className="middlebox">
+                </section>
 
 
                 </div>

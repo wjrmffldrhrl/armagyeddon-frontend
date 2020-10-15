@@ -14,7 +14,7 @@ class MainpageComponent extends React.Component {
         <div class="row justify-content-center mb-5" data-aos="fade-up">
           <div id="filters" class="filters text-center button-group col-md-7">
           </div>
-          <div id="posts" class="row no-gutter">
+          {/* <div id="posts" class="row no-gutter">
             <div class="item_web">
               <h1>아마곗돈 알아보기</h1>
                 <a href="portfolio-single.html" class="item-wrap">
@@ -22,10 +22,10 @@ class MainpageComponent extends React.Component {
                   
                 </a>
             </div>
-          </div>  
+          </div>   */}
 
 
-          <div id="posts" class="row no-gutter">
+          {/* <div id="posts" class="row no-gutter">
             <div class="item_web">
               <h1>아마곗돈 이율 알아보기</h1>
                 <a href="portfolio-single.html" class="item-wrap">
@@ -35,12 +35,12 @@ class MainpageComponent extends React.Component {
                   
                 </a>
             </div>
-          </div>  
+          </div>   */}
           <div id="filters" class="filters text-center button-group col-md-7">
           </div>
           <div id="posts" >
             <div class="item_web">
-              <h1>아마곗돈 순번 원리 알아보기</h1>
+              {/* <h1>아마곗돈 순번 원리 알아보기</h1> */}
                 <a href="portfolio-single.html" class="item-wrap">
                   <span class="icon-add"></span>
 

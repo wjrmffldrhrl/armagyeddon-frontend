@@ -21,6 +21,7 @@ import Board from '../Pages/Board';
 import ContactUs from '../Pages/ContactUs';
 import GyeSearch from '../Pages/gye/GyeSearch';
 import PWSearch from '../Pages/PWSearch';
+import VideoBackgroundPage from '../Pages/VideoBackgroundPage';
 
 
 
@@ -49,7 +50,9 @@ class Routes extends React.Component {
                             userStateChange={this.handleUserState}/>
                 
                 <Switch>
-                    <Route exact  path="/" component={Home}/>
+                    {/* <Route exact  path="/" component={Home}/> */}
+                    <Route exact  path="/" component={VideoBackgroundPage}/>
+                    <Route path="/home" component={Home}/>
                     <Route path="/login" render={
                                 (props) => <Login {...props} userStateChange={this.handleUserState}/>}/>
                     <Route path="/RegisterForm" component={RegisterForm}/>

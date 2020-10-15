@@ -34,14 +34,14 @@ class GyeListComponent extends React.Component {
                 <MDBRow className="mt-4">
                     <MDBCol md="10">
                     <MDBView hover zoom>
-                    <a href={'/gye/' + gye.id}><img src="images/cute.jpg" alt="Image" className="img-fluid rounded mb-4"/></a>
+                    <a ><img src="images/cute.jpg" alt="Image" className="img-fluid rounded mb-4"/></a>
                 
                         <MDBMask className="flex-center">
                         <p className="white-text">
                         <p>Type : {gye.type}</p>
-                    <p>Target Money : {gye.targetMoney}</p>
-                    <p>Total Member : {gye.totalMember}</p>
-                    <p>Period : {gye.period} month</p>
+                        <p>Target Money : {gye.targetMoney}</p>
+                        <p>Total Member : {gye.totalMember}</p>
+                        <p>Period : {gye.period} month</p>
                         </p>
                         </MDBMask>
                     </MDBView>

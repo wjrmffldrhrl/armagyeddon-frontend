@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-
 import AuthenticationService from '../../services/AuthenticationService.js'
 import InfoService from '../../services/InfoService';
 import ArmaTokenService from '../../services/ArmaTokenService';
@@ -18,13 +17,14 @@ class MyPageComponent extends Component {
             balance : '',
             amount : 0,
             chargingMessage : '',
-            myGyeList: [],
+            myGyeList: []
         };
 
         this.getBalance = this.getBalance.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.chargeToken = this.chargeToken.bind(this);
     }
+
 
     componentDidMount() {
         InfoService.getUserInfo(this.state.loggedInUser)
@@ -35,16 +35,19 @@ class MyPageComponent extends Component {
             console.log(error);
         });
 
+        
         this.getBalance();
+        this.getMyGyeList();
 
     }
+
     getMyGyeList() {
         InfoService.getMyGyeList(this.state.loggedInUser)
         .then(response => {
-            console.log(response.data);
+            console.log("response: ",response.data);
             this.setState({myGyeList : response.data});
         }).catch(error => {
-            console.log(error)
+            console.log(error);
         });
     }
 
@@ -96,10 +99,17 @@ class MyPageComponent extends Component {
         const listItem = myGyeList.map((gye) =>
             <div className="col-md-6 col-lg-4 mb-5" key={gye.id}>
                 <a href={'/gye/' + gye.id}><img src="images/cute.jpg" alt="Image" className="img-fluid rounded mb-4"/></a>
+                <p>Type : {gye.type}</p>
+                    <p>Target Money : {gye.targetMoney}</p>
+                    <p>Total Member : {gye.totalMember}</p>
+                    <p>Period : {gye.period} month</p>
+
                 <h3><a href={'/gye/' + gye.id} className="text-black">{gye.title}</a></h3>
-                
-            </div>
+            </div> 
         );
+        console.log(myGyeList);
+
+
         return (
             
             <div className="mypage_card">
@@ -107,7 +117,26 @@ class MyPageComponent extends Component {
                <div className="myInfo">
                     <img src="images/cute.jpg" alt="Image placeholder" class="img-fluid mb-4 w-50 rounded-circle"/>
                     <div className="edit_button">
-                    <a href="/RegisterForm" class="btn btn-primary btn-sm">Edit</a>
+                    <div className="input-group mb-3">
+                                    <div className="input-group-prepend">
+                                        <span className="input-group-text" id="inputGroupFileAddon01">
+                                            Edit
+                                        </span>
+                                        </div>
+                                    <div className="custom-file">
+                                            <input
+                                            type="file"
+                                            className="custom-file-input"
+                                            id="inputGroupFile01"
+                                            aria-describedby="inputGroupFileAddon01"
+                                            />
+                                            <label className="custom-file-label" htmlFor="inputGroupFile01">
+                                            Choose file
+                                            </label>
+                                    </div>
+                                    
+                                </div>
+
                     </div>
                     <h1>My Page</h1>
                     
@@ -140,7 +169,9 @@ class MyPageComponent extends Component {
                     </div>
                     
                     <h2>My Gye List</h2>
-                    <listItem/>
+                    <div>
+                        {listItem}
+                    </div>
                 </div> 
             </div>    
             

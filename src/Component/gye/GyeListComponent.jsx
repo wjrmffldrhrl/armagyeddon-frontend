@@ -1,5 +1,6 @@
 import React from 'react';
 import GyeService from '../../services/GyeService';
+import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 class GyeListComponent extends React.Component {
 
@@ -24,12 +25,34 @@ class GyeListComponent extends React.Component {
 
     render() {
         let gyes = this.state.gyes;
+
+        
         const listItem = gyes.map((gye) =>
             <div className="col-md-6 col-lg-4 mb-5" key={gye.id}>
-                <a href={'/gye/' + gye.id}><img src="images/cute.jpg" alt="Image" className="img-fluid rounded mb-4"/></a>
-                <h3><a href={'/gye/' + gye.id} className="text-black">{gye.title}</a></h3>
+                <MDBContainer className="mt-5">
+  
+                <MDBRow className="mt-4">
+                    <MDBCol md="10">
+                    <MDBView hover zoom>
+                    <a href={'/gye/' + gye.id}><img src="images/cute.jpg" alt="Image" className="img-fluid rounded mb-4"/></a>
                 
-                <div>April 15, 2019 <span className="mx-2">|</span> <a href="#">2 Comments</a></div>
+                        <MDBMask className="flex-center">
+                        <p className="white-text">
+                        <p>Type : {gye.type}</p>
+                    <p>Target Money : {gye.targetMoney}</p>
+                    <p>Total Member : {gye.totalMember}</p>
+                    <p>Period : {gye.period} month</p>
+                        </p>
+                        </MDBMask>
+                    </MDBView>
+                    <h3><a href={'/gye/' + gye.id} className="text-black">{gye.title}</a></h3>
+                    <div>April 15, 2019 <span className="mx-2">|</span> <a href="#">2 Comments</a></div>
+                    </MDBCol>
+                    
+                </MDBRow>
+                </MDBContainer>
+
+               
             </div>
         );
 
@@ -39,7 +62,6 @@ class GyeListComponent extends React.Component {
 
         return(
             <div>
-
                 <section className="site-section">
                     <div className="container">
                         <div className="row mb-5">

@@ -24,7 +24,6 @@ import PWSearch from '../Pages/PWSearch';
 import VideoBackgroundPage from '../Pages/VideoBackgroundPage';
 
 
-
 class Routes extends React.Component {
     constructor(props) {
         super(props);
@@ -40,6 +39,7 @@ class Routes extends React.Component {
 
     render() {
         const HeaderWithRouter = withRouter(Header);
+        
         
         const FooterWithRouter = withRouter(Footer);
         const isLoggedIn = this.state.isLoggedIn;

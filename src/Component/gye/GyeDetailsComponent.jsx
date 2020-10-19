@@ -1,6 +1,7 @@
 import React from 'react';
 import GyeService from '../../services/GyeService';
 import GyeJoinComponent from './GyeJoinComponent';
+
 class GyeDetailsComponent extends React.Component {
 
     constructor(props) {
@@ -13,6 +14,8 @@ class GyeDetailsComponent extends React.Component {
     }
 
     componentDidMount() {
+
+       
         GyeService.getGyeDetails(this.props.id)
         .then(response => {
             

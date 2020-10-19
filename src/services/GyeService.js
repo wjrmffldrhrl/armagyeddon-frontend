@@ -7,7 +7,7 @@ class GyeService {
         return axios.get('/gye');
     }
 
-
+   
     getGyeDetails(id) {
         AuthenticationService.setupAxiosInterceptors();
         return axios.get('/gye/'+id);

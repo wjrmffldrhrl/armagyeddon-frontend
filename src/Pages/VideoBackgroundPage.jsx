@@ -5,6 +5,7 @@ MDBRow, MDBCol, MDBIcon, MDBBtn, MDBView, MDBContainer } from "mdbreact";
 import styles from '../static/css/video.css';
 import home from '../Pages/Home';
 
+
 class VideoBackgroundPage extends React.Component {
 state = {
 collapseID: ""
@@ -14,6 +15,7 @@ toggleCollapse = collapseID => () =>
 this.setState(prevState => ({
 collapseID: prevState.collapseID !== collapseID ? collapseID : ""
 }));
+
 
 render() {
 const overlay = (

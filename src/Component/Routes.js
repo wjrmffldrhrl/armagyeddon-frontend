@@ -12,7 +12,10 @@ import RegisterForm from './login/RegisterForm';
 import agree from './login/agree';
 import GyeList from '../Pages/gye/GyeList';
 import GyeDetails from '../Pages/gye/GyeDetails';
+
 import GyeCreate from '../Pages/gye/GyeCreate';
+import GyeCreateStep from '../Component/gye/GyeCreateStep';
+
 import GyeManagement from '../Pages/gye/GyeManagement';
 import About from '../Pages/About';
 import Footer from '../Pages/Footer';
@@ -22,6 +25,7 @@ import ContactUs from '../Pages/ContactUs';
 import GyeSearch from '../Pages/gye/GyeSearch';
 import PWSearch from '../Pages/PWSearch';
 import VideoBackgroundPage from '../Pages/VideoBackgroundPage';
+
 
 
 class Routes extends React.Component {
@@ -69,6 +73,7 @@ class Routes extends React.Component {
                     {/* <AuthenticatedRoute path="/gye-list" component={GyeList}/> */}
                     <AuthenticatedRoute path="/gye/:id" component={GyeDetails}/>
                     <AuthenticatedRoute path="/create-gye" component={GyeCreate}/>
+                    <AuthenticatedRoute path="/create-gye-step" component={GyeCreateStep}/>
                     <AuthenticatedRoute path="/management-gye/:id" component={GyeManagement}/>
                     
                 </Switch>

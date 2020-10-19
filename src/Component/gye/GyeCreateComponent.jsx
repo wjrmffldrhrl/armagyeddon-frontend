@@ -2,6 +2,15 @@ import React from 'react';
 import GyeService from '../../services/GyeService';
 import styles from '../../static/css/gye.css';
 import classnames from "classnames";
+import { makeStyles } from '@material-ui/core/styles';
+import Stepper from '@material-ui/core/Stepper';
+import Step from '@material-ui/core/Step';
+import StepLabel from '@material-ui/core/StepLabel';
+import StepContent from '@material-ui/core/StepContent';
+import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+
 
 import {
     Card,
@@ -105,6 +114,8 @@ class GyeCreateComponent extends React.Component {
 
         e.preventDefault();
     }
+
+    
 
     render() {
         return (
@@ -341,6 +352,8 @@ class GyeCreateComponent extends React.Component {
                         <input className="buttontype" type="button" value="Submit" onClick={this.handleSubmit}/>
 
                     </form>
+
+                    
 
                 </div>
             </div>

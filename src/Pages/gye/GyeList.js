@@ -18,7 +18,8 @@ class GyeList extends React.Component {
                 <div class='gyetitle'>
 
                     <h1>Armagyeddon Gye List                    
-                    <Link to="/create-gye" className="btn btn-success">create gye</Link></h1>
+                    <Link to="/create-gye-step" className="btn btn-success">create gye</Link></h1>
+                   <h1> <Link to="/create-gye" className="btn btn-success">create gye</Link></h1>
                 </div>
                 
                 <GyeListComponent/>

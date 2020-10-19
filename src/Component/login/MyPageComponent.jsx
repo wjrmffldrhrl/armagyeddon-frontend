@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import AuthenticationService from '../../services/AuthenticationService.js'
 import InfoService from '../../services/InfoService';
 import ArmaTokenService from '../../services/ArmaTokenService';
-
+import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import style from '../../static/css/mypage.css';
 
 class MyPageComponent extends Component {
@@ -168,10 +168,20 @@ class MyPageComponent extends Component {
                         {this.state.chargingMessage}
                     </div>
                     
-                    <h2>My Gye List</h2>
-                    <div>
+                    My Gye List : 
+
+                    <MDBDropdown>
+                    <MDBDropdownToggle caret color="primary">
+                        참여중인 계 목록
+                    </MDBDropdownToggle>
+                    <MDBDropdownMenu basic>
+                        <MDBDropdownItem>{listItem}</MDBDropdownItem>
+                        
+                    </MDBDropdownMenu>
+                    </MDBDropdown>
+                    {/* <div>
                         {listItem}
-                    </div>
+                    </div> */}
                 </div> 
             </div>    
             

@@ -29,13 +29,6 @@ class ArmaTokenService {
         });
     }
 
-    collectTokenToGye(targetMoney, totalMember, interest){
-        AuthenticationService.setupAxiosInterceptors();
-        return axios.put('/user-token' , {
-            targetMoney, totalMember, interest
-        });
-    }
-
     sendTokenToUser(userEmail, gyeId, amount){
         AuthenticationService.setupAxiosInterceptors();
         return axios.put('/gye-token' , {

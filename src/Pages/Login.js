@@ -76,6 +76,7 @@ class Login extends React.Component {
                             </label>
                             
                             <label >
+
                             <div >
                             <div className="input-group mb-2">
                                 <div className="input-group-append">
@@ -90,6 +91,7 @@ class Login extends React.Component {
                             <div className="d-flex justify-content-center mt-3 login_container">
                                 <button className="btn login_btn" onClick={this.loginClicked} >Login</button>
                             </div>
+
                             </div>
                             
                             </label>

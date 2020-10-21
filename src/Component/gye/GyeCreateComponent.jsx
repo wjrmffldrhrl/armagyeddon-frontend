@@ -42,7 +42,7 @@ class GyeCreateComponent extends React.Component {
             period: 0,
             targetMoney: 0,
             totalMember: 0,
-            type: '저축계',
+            type: '',
             interest:0,
             state: 'wait',
             turn: 0

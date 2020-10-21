@@ -63,25 +63,40 @@ class GyeManagementComponent extends React.Component {
 
             });
     }
-    //잠시 삭제
-    // async handleCollect(e) {
-    //     alert('collect!');
 
-    //         let gye = this.state.gye;
-    //         let collectMoney = gye.targetMoney / (gye.totalMember - 1);
-    //
-    //         for (let i = 0; i < this.state.members.length; i++)
-    //         {
-    //             const member = this.state.members[i];
-    //             const response = await
-    //                 ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney);
-    //         }
-    //
-    //
-    //         console.log(response.data);
-    //
-    //
-    // }
+    async handleCollect(e) {
+        alert('collect!');
+
+        let gye = this.state.gye;
+
+        if (gye.type === '저축계') {
+            let collectMoney = gye.targetMoney / (gye.totalMember - 1);
+                for (let i = 0; i < this.state.members.length; i++) {
+                    const member = this.state.members[i];
+                    const response = await
+                        ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney);
+            }
+        } else if (gye.type === '낙찰계') {
+            let collectMoney = gye.targetMoney / gye.totalMember;
+            for (let i = 0; i < this.state.members.length; i++) {
+                for (let i = 0; i < this.state.members.length; i++) {
+
+                    let targetFee;
+                    if (i > this.state.members)
+                        targetFee = collectMoney + (collectMoney * this.state.interest * 0.01);
+                    else
+                        targetFee = collectMoney;
+                    const member = this.state.members[i];
+                    const response = await ArmaTokenService.sendTokenToGye(member.email, gye.id, collectMoney)
+
+
+                }
+
+            }
+        }
+    }
+
+
 
 
 

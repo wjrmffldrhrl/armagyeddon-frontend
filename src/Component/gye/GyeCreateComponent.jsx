@@ -35,6 +35,7 @@ class GyeCreateComponent extends React.Component {
           [state]: index
         });
       };
+    
       render() {
         return (
           <>
@@ -51,7 +52,7 @@ class GyeCreateComponent extends React.Component {
             period: 0,
             targetMoney: 0,
             totalMember: 0,
-            type: '저축계',
+            type: '',
             interest:0,
             state: 'wait',
             turn: 0
@@ -86,13 +87,10 @@ class GyeCreateComponent extends React.Component {
 
         }
 
-
-
-
     }
 
     handleSubmit(e) {
-        console.log(this.state.title, this.state.period, 
+        console.log( this.state.title, this.state.period, 
             this.state.state, this.state.targetMoney, 
             this.state.totalMember, this.state.interest, this.state.type, this.state.turn);
 
@@ -140,8 +138,11 @@ class GyeCreateComponent extends React.Component {
                                 onClick={e => this.toggleNavs(e, "tabs", 1)}
                                 href="#pablo"
                                 role="tab"
+                                onChange={this.handleChange}
+                                value={this.state.type}
                             >
                                 <i className="ni ni-cloud-upload-96 mr-2" />
+                                
                                 낙찰계
                             </NavLink>
                         </NavItem>
@@ -155,6 +156,8 @@ class GyeCreateComponent extends React.Component {
                                 onClick={e => this.toggleNavs(e, "tabs", 2)}
                                 href="#pablo"
                                 role="tab"
+                                onChange={this.handleChange}
+                                value={this.state.type}
                             >
                                 <i className="ni ni-bell-55 mr-2" />
                                 저축계
@@ -170,6 +173,8 @@ class GyeCreateComponent extends React.Component {
                                 onClick={e => this.toggleNavs(e, "tabs", 3)}
                                 href="#pablo"
                                 role="tab"
+                                onChange={this.handleChange}
+                                value={this.state.type}
                             >
                                 <i className="ni ni-calendar-grid-58 mr-2" />
                                 기부계
@@ -187,7 +192,7 @@ class GyeCreateComponent extends React.Component {
                             <form>
 
                                 <label>
-                                    Type : 낙찰계                            
+                                    Type : 낙찰계                    
                                 </label>
 
                                 <div>

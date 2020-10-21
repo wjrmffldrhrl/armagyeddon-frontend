@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import AuthenticationService from '../services/AuthenticationService';
 import styles from '../static/css/header.css';
+import SidebarComponent from '../Component/home/SidebarComponent';
 
 
 
@@ -29,8 +30,8 @@ class Header extends React.Component {
             <section id="home" className="section bg-voilet bg-overlay overflow-hidden d-flex align-items-center">
                 <div class="btn_armagyeddon">
                     <Link to="/" className="text-white font-weight-bold">                           
-                            <h1> Armagyeddon </h1>
-                            
+                            {/* <h1> Armagyeddon </h1> */}
+                            <h1><SidebarComponent></SidebarComponent>  </h1>
                             
                     </Link>
                 </div>

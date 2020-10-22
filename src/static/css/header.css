@@ -82,3 +82,8 @@
     transform: none!important;
     height: 100vh;
     }
+
+    .slide_card {
+        width: 1200px;
+        margin-top: 90px;
+    }

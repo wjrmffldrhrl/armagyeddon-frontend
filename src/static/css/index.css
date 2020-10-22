@@ -9,9 +9,9 @@
  
 }
 .logo {
-    width:300px;
+    width:200px;
     margin: 40px;
-    height: 100px;
+    height: 80px;
 }
 .people1 {
   width: 250px;
@@ -36,4 +36,8 @@
 .main_card {
   margin-left: 140px;
   margin-top: 100px;
+}
+
+.button_more {
+  margin-left: 300px;
 }

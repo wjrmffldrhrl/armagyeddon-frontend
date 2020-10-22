@@ -28,8 +28,8 @@ class Index extends React.Component {
     render() {
         return(
             <div>
-               
-                <div id="home" className="section bg-voilet bg-overlay overflow-hidden d-flex align-items-center">
+                
+               <div id="home" className="section bg-voilet bg-overlay overflow-hidden d-flex align-items-center">
                     <div className="container">
                     
                         <div className="row align-items-center">
@@ -61,7 +61,7 @@ class Index extends React.Component {
 
                 <section>
                 <div>
-                <SidebarComponent></SidebarComponent>
+               
                 
                 <h2 className="h1-responsive font-weight-bold text-center my-5">
                         How to Use Armagyeddon?

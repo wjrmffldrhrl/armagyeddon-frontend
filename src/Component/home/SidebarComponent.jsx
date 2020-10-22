@@ -10,6 +10,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import { Link } from "react-router-dom";
+import AuthenticationService from '../../services/AuthenticationService';
 
 const useStyles = makeStyles({
   list: {
@@ -37,26 +39,49 @@ export default function TemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
-  const list = (anchor) => (
-    <div
+  
+   const handleLogout = (e) => {
+       AuthenticationService.logout();
+   };
+
+  const isLoggedIn = AuthenticationService.isUserLoggedIn();
+  
+  
+  const list_notLogin = (anchor) => (
+      
+      <div
       className={clsx(classes.list, {
-        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
-      })}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
+          [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+        })}
+        role="presentation"
+        onClick={toggleDrawer(anchor, false)}
+        onKeyDown={toggleDrawer(anchor, false)}
+        >
       <List>
-        {['MyPage', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
+        {[
+            <Link to="/home" className="text-black font-weight-bold">Home</Link>, 
+            <Link to="/about" className="text-black font-weight-bold">About</Link>, 
+            <Link to="/gye-list" className="text-black font-weight-bold">Gye</Link>, 
+            <Link to="/board" className="text-black font-weight-bold">Board</Link>,
+            <Link to="/contactus" className="text-black font-weight-bold">ContactUs</Link>   
+        ].map((text, index) => (
+            <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
       </List>
       <Divider />
+
+
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {[
+            <Link to="/login" className="text-black font-weight-bold">
+            Sign In</Link>, 
+            <Link to="/sign-up" className="text-black font-weight-bold">
+            Sign Up</Link>
+            
+        ].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
@@ -66,13 +91,59 @@ export default function TemporaryDrawer() {
     </div>
   );
 
+  const list_login = (anchor) => (
+      
+    
+    
+    <div
+    className={clsx(classes.list, {
+        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+      })}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+      >
+    <List>
+      {[
+          <Link to="/home" className="text-black font-weight-bold">Home</Link>, 
+          <Link to="/about" className="text-black font-weight-bold">About</Link>, 
+          <Link to="/gye-list" className="text-black font-weight-bold">Gye</Link>, 
+          <Link to="/board" className="text-black font-weight-bold">Board</Link>,
+          <Link to="/contactus" className="text-black font-weight-bold">ContactUs</Link>   
+      ].map((text, index) => (
+          <ListItem button key={text}>
+          <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+          <ListItemText primary={text} />
+        </ListItem>
+      ))}
+    </List>
+    <Divider />
+
+
+    <List>
+      {[
+          <Link to="/mypage" className="text-black font-weight-bold">
+          My Page</Link>, 
+          <Link to="/logout" className="text-black font-weight-bold"
+          onClick={(e)=>{handleLogout(e)}}>Logout
+          </Link>
+        ].map((text, index) => (
+        <ListItem button key={text}>
+          <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+          <ListItemText primary={text} />
+        </ListItem>
+      ))}
+    </List>
+  </div>
+);
+
   return (
-    <div>
+    <div className="font-weight-bold">
       {['Armagyeddon'].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
           <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-            {list(anchor)}
+            { isLoggedIn ? list_login(anchor) : list_notLogin(anchor)}
           </Drawer>
         </React.Fragment>
       ))}

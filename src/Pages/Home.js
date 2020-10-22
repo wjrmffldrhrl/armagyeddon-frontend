@@ -5,12 +5,20 @@ import 'bootstrap/dist/css/bootstrap.css'
 import {Link} from 'react-router-dom';
 import FriendsComponent from '../Component/home/FriendsComponet';
 import MainpageComponent from '../Component/home/MainpageComponent';
+import SidebarComponent from '../Component/home/SidebarComponent';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css'
 
 import { MDBRow, MDBCol, MDBIcon } from "mdbreact";
+
+import Timeline from '@material-ui/lab/Timeline';
+import TimelineItem from '@material-ui/lab/TimelineItem';
+import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
+import TimelineConnector from '@material-ui/lab/TimelineConnector';
+import TimelineContent from '@material-ui/lab/TimelineContent';
+import TimelineDot from '@material-ui/lab/TimelineDot';
 
 
 
@@ -20,8 +28,8 @@ class Index extends React.Component {
     render() {
         return(
             <div>
-               
-                <div id="home" className="section bg-voilet bg-overlay overflow-hidden d-flex align-items-center">
+                
+               <div id="home" className="section bg-voilet bg-overlay overflow-hidden d-flex align-items-center">
                     <div className="container">
                     
                         <div className="row align-items-center">
@@ -51,6 +59,44 @@ class Index extends React.Component {
                  
                 </div> 
 
+                <section>
+                <div>
+               
+                
+                <h2 className="h1-responsive font-weight-bold text-center my-5">
+                        How to Use Armagyeddon?
+                        </h2>
+                <Timeline align="alternate">
+                <TimelineItem>
+                    <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent><h4>Sign Up</h4></TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                    <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent><h4>Charge you Token</h4></TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                    <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent><h4>Create Gye</h4></TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                    <TimelineSeparator>
+                    <TimelineDot />
+                    </TimelineSeparator>
+                    <TimelineContent><h4>Start Your Gye</h4></TimelineContent>
+                </TimelineItem>
+                </Timeline>
+                </div>
+                </section>
                 
 
                 <div>
@@ -59,9 +105,9 @@ class Index extends React.Component {
                     <h2 className="h1-responsive font-weight-bold text-center my-5">
                         Why is it so great?
                         </h2>
-                    <p className="lead grey-text w-responsive text-center mx-auto mb-5">
+                    {/* <p className="lead grey-text w-responsive text-center mx-auto mb-5">
                         왜 아마곗돈을 사용할까요?
-                        </p>
+                        </p> */}
 
                     <div className="main_card">
                     <MDBRow>
@@ -154,7 +200,7 @@ class Index extends React.Component {
                     </div>
                 </section>
 
-
+                
                 </div>
 {/* 
                 <div>

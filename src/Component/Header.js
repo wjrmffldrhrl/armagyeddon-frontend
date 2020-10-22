@@ -2,7 +2,10 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import AuthenticationService from '../services/AuthenticationService';
 import styles from '../static/css/header.css';
-
+import SidebarComponent from '../Component/home/SidebarComponent';
+import { BrowserRouter as Router } from "react-router-dom";
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBMask,
+MDBRow, MDBCol, MDBIcon, MDBBtn, MDBView, MDBContainer } from "mdbreact";
 
 
 class Header extends React.Component {
@@ -13,6 +16,15 @@ class Header extends React.Component {
    
     }
 
+    state = {
+        collapseID: ""
+        };
+        
+        toggleCollapse = collapseID => () =>
+        this.setState(prevState => ({
+        collapseID: prevState.collapseID !== collapseID ? collapseID : ""
+        }));
+
 
     handleLogout(e) {
         AuthenticationService.logout();
@@ -22,15 +34,22 @@ class Header extends React.Component {
     render() {
 
         const isLoggedIn = this.props.isLoggedIn;
-        
+        const overlay = (
+            <div id="sidenav-overlay" style={{ backgroundColor: "transparent" }} onClick={this.toggleCollapse("navbarCollapse")} />
+            );        
 
         return (
+
             
+            
+
+            <div id="videobackground">
             <section id="home" className="section bg-voilet bg-overlay overflow-hidden d-flex align-items-center">
+
                 <div class="btn_armagyeddon">
                     <Link to="/" className="text-white font-weight-bold">                           
-                            <h1> Armagyeddon </h1>
-                            
+                            {/* <h1> Armagyeddon </h1> */}
+                            {/* <h1><SidebarComponent></SidebarComponent>  </h1> */}
                             
                     </Link>
                 </div>
@@ -38,7 +57,7 @@ class Header extends React.Component {
             
                 <div className="container">                   
                            
-                    {
+                    {/* {
                         !this.props.isLoggedIn &&
                         <div className="button-group store-buttons d-flex">
                             <div>
@@ -84,53 +103,53 @@ class Header extends React.Component {
 
                         
                         
-                    }
+                    } */}
 
                     {
                     
-                        this.props.isLoggedIn &&
+                    //     this.props.isLoggedIn &&
                        
-                       <div className="button-group store-buttons d-flex">
-                            <div>
-                                <a><Link to="/home" className="text-white font-weight-bold">
-                                    Home
-                                </Link></a><a></a><a></a>
+                    //    <div className="button-group store-buttons d-flex">
+                    //         <div>
+                    //             <a><Link to="/home" className="text-white font-weight-bold">
+                    //                 Home
+                    //             </Link></a><a></a><a></a>
 
-                                <a><Link to="/about" className="text-white font-weight-bold">
-                                    About 
-                                </Link></a><a></a><a></a>
+                    //             <a><Link to="/about" className="text-white font-weight-bold">
+                    //                 About 
+                    //             </Link></a><a></a><a></a>
 
-                                <a><Link to="/gye-list" className="text-white font-weight-bold">
-                                    Gye
-                                </Link></a><a></a><a></a>
+                    //             <a><Link to="/gye-list" className="text-white font-weight-bold">
+                    //                 Gye
+                    //             </Link></a><a></a><a></a>
 
-                                {/* <a><Link to="/search" className="text-white font-weight-bold">
-                                    Search
-                                 </Link></a><a></a><a></a><a></a>      */}
+                    //             {/* <a><Link to="/search" className="text-white font-weight-bold">
+                    //                 Search
+                    //              </Link></a><a></a><a></a><a></a>      */}
 
-                                <a><Link to="/board" className="text-white font-weight-bold">
-                                    Board
-                                </Link></a><a></a><a></a>  
+                    //             <a><Link to="/board" className="text-white font-weight-bold">
+                    //                 Board
+                    //             </Link></a><a></a><a></a>  
 
-                                <a><Link to="/contactus" className="text-white font-weight-bold">
-                                    Contact
-                                </Link></a><a></a><a></a>                        
+                    //             <a><Link to="/contactus" className="text-white font-weight-bold">
+                    //                 Contact
+                    //             </Link></a><a></a><a></a>                        
                                                        
-                            </div> 
+                    //         </div> 
                             
-                            <div class="btn_sign">
+                    //         <div class="btn_sign">
 
-                                <a><Link to="/mypage" className="text-white font-weight-bold">
-                                     My Page
-                                </Link></a><a></a><a></a>
+                    //             <a><Link to="/mypage" className="text-white font-weight-bold">
+                    //                  My Page
+                    //             </Link></a><a></a><a></a>
 
-                                <a><Link to="/logout" className="text-white font-weight-bold"
-                                 onClick={this.handleLogout}>Logout
-                                </Link></a><a></a><a></a>
+                    //             <a><Link to="/logout" className="text-white font-weight-bold"
+                    //              onClick={this.handleLogout}>Logout
+                    //             </Link></a><a></a><a></a>
 
-                             </div>     
+                    //          </div>     
                                                                             
-                        </div> 
+                    //     </div> 
 
                         
                     }                       
@@ -138,7 +157,38 @@ class Header extends React.Component {
                 </div>     
                                
             </section>           
-           
+            <Router>
+                <div>
+                <MDBNavbar dark expand="md" fixed="top">
+                    <MDBContainer>
+                    <MDBNavbarBrand>
+                        <span className="white-text"><h1><SidebarComponent></SidebarComponent>  </h1></span>
+                    </MDBNavbarBrand>
+                    <MDBNavbarToggler onClick={this.toggleCollapse("navbarCollapse")} />
+                    <MDBCollapse id="navbarCollapse" isOpen={this.state.collapseID} navbar>
+                        <MDBNavbarNav left>
+                        
+                        </MDBNavbarNav>
+
+
+
+                        {/* <MDBNavbarNav right>
+                        <MDBNavItem>
+                        <Link to="/login" className="text-black font-weight-bold">Sign In</Link> 
+                        </MDBNavItem>
+                        
+                        <MDBNavItem>
+                        <Link to="/sign-up" className="text-black font-weight-bold">Sign Up</Link>
+                        </MDBNavItem>
+                        </MDBNavbarNav> */}
+                    </MDBCollapse>
+                    </MDBContainer>
+                </MDBNavbar>
+                {this.state.collapseID && overlay}
+                </div>
+            </Router>
+          
+            </div> 
            
         );
     }

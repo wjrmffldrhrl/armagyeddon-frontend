@@ -6,6 +6,7 @@ import SidebarComponent from '../Component/home/SidebarComponent';
 import { BrowserRouter as Router } from "react-router-dom";
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBMask,
 MDBRow, MDBCol, MDBIcon, MDBBtn, MDBView, MDBContainer } from "mdbreact";
+import MyProfile from './home/MyProfile';
 
 
 class Header extends React.Component {
@@ -163,8 +164,8 @@ class Header extends React.Component {
                     </MDBNavbarBrand>
                     <MDBNavbarToggler onClick={this.toggleCollapse("navbarCollapse")} />
                     <MDBCollapse id="navbarCollapse" isOpen={this.state.collapseID} navbar>
-                        <MDBNavbarNav left>
-                        
+                        <MDBNavbarNav right>
+                        <MyProfile></MyProfile>
                         </MDBNavbarNav>
 
                     </MDBCollapse>

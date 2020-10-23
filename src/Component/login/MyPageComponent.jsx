@@ -179,9 +179,7 @@ class MyPageComponent extends Component {
                         
                     </MDBDropdownMenu>
                     </MDBDropdown>
-                    {/* <div>
-                        {listItem}
-                    </div> */}
+                   
                 </div> 
             </div>    
             

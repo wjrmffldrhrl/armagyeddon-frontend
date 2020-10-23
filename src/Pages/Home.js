@@ -11,6 +11,8 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css'
 
 import { MDBRow, MDBCol, MDBIcon } from "mdbreact";
+import { MDBBtnGroup, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
+
 
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
@@ -107,10 +109,17 @@ class Index extends React.Component {
                                 현재 운영되고 있는 계모임
                                 </h2>
                                 <GyeListComponent></GyeListComponent>
-                        <Fragment >                       
-                        <MDBBtn className="button_more" gradient="purple">더 알아보기</MDBBtn>
-                       
-                        </Fragment>
+                                
+                                <div className="button_more">
+                                <MDBRow>
+                                <MDBCol md='12' className="mb-4">
+                                <MDBBtnGroup size="lg">                                   
+                                    <MDBBtn className="button_more" gradient="purple" href="/gye-list">더 알아보기</MDBBtn>                                    
+                                </MDBBtnGroup>
+                                </MDBCol>
+                                </MDBRow>
+                                </div>
+
                         </div>
 
 

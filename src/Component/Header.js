@@ -36,15 +36,13 @@ class Header extends React.Component {
         const isLoggedIn = this.props.isLoggedIn;
         const overlay = (
             <div id="sidenav-overlay" style={{ backgroundColor: "transparent" }} onClick={this.toggleCollapse("navbarCollapse")} />
-            );        
+            );     
+                        
 
         return (
 
-            
-            
-
             <div id="videobackground">
-            <section id="home" className="section bg-voilet bg-overlay overflow-hidden d-flex align-items-center">
+            <section id="home" >
 
                 <div class="btn_armagyeddon">
                     <Link to="/" className="text-white font-weight-bold">                           
@@ -52,8 +50,7 @@ class Header extends React.Component {
                             {/* <h1><SidebarComponent></SidebarComponent>  </h1> */}
                             
                     </Link>
-                </div>
-                
+                </div>                
             
                 <div className="container">                   
                            
@@ -170,17 +167,6 @@ class Header extends React.Component {
                         
                         </MDBNavbarNav>
 
-
-
-                        {/* <MDBNavbarNav right>
-                        <MDBNavItem>
-                        <Link to="/login" className="text-black font-weight-bold">Sign In</Link> 
-                        </MDBNavItem>
-                        
-                        <MDBNavItem>
-                        <Link to="/sign-up" className="text-black font-weight-bold">Sign Up</Link>
-                        </MDBNavItem>
-                        </MDBNavbarNav> */}
                     </MDBCollapse>
                     </MDBContainer>
                 </MDBNavbar>

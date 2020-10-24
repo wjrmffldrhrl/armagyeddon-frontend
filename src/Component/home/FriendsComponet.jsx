@@ -50,3 +50,5 @@ class FriendsComponent extends React.Component {
 }
 
 export default FriendsComponent;
+
+

@@ -60,8 +60,43 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
+import styles from '../../static/css/index.css';
 
+const tileData = [
+  {
+    img: 'images/soju.jpg',
+    title: '연말회식',
+    author: 'author',
+  },
+  {
+   img: 'images/chippo.jpg',
+   title: '취뽀',
+   author: 'author',
+    
+  },
+  {
+   img: 'images/cute.jpg',
+   title: '유럽여행',
+   author: 'author',
+  },
+  {
+   img: 'images/diet.jpg',
+   title: '다이어트',
+   author: 'author',
+  },
+   {
+    img: 'images/gansik.jpg',
+    title: '간식용돈모으기',
+    author: 'author',
+   }
+   ,
+   {
+    img: 'images/mung1.jpg',
+    title: '갱얼쥐모임',
+    author: 'author',
+   }
 
+];
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -87,41 +122,35 @@ const useStyles = makeStyles((theme) => ({
 
 
 
- const tileData = [
-  {
-     img: image,
-     title: 'Image',
-     author: 'author',
-   },
-  //  {
-  //    [etc...]
-  //  },
- ];
- 
-export default function SingleLineGridList() {
+
+export default function AnimationComponent() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <GridList className={classes.gridList} cols={2.5}>
-        {tileData.map((tile) => (
-          <GridListTile key={tile.img}>
-            <img src={tile.img} alt={tile.title} />
-            <GridListTileBar
-              title={tile.title}
-              classes={{
-                root: classes.titleBar,
-                title: classes.title,
-              }}
-              actionIcon={
-                <IconButton aria-label={`star ${tile.title}`}>
-                  <StarBorderIcon className={classes.title} />
-                </IconButton>
-              }
-            />
-          </GridListTile>
-        ))}
-      </GridList>
-    </div>
+
+    <div >
+        <div className={classes.root}>
+          <GridList className={classes.gridList} cols={5.5}>
+            {tileData.map((tile) => (
+              <GridListTile  className="user_feedback"  key={tile.img}>
+                <img src={tile.img} alt={tile.title} />
+                <GridListTileBar
+                  title={tile.title}
+                  classes={{
+                    root: classes.titleBar,
+                    title: classes.title,
+                  }}
+                  actionIcon={
+                    <IconButton aria-label={`star ${tile.title}`}>
+                      <StarBorderIcon className={classes.title} />
+                    </IconButton>
+                  }
+                />
+              </GridListTile>
+            ))}
+          </GridList>
+        </div>
+      </div>
   );
 }
+

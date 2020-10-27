@@ -26,6 +26,7 @@ import { Fragment } from "react";
 import { MDBBtn } from "mdbreact";
 
 
+
 class Index extends React.Component {
 
     
@@ -63,11 +64,9 @@ class Index extends React.Component {
                  
                 </div> 
 
-                
-
                 <div>
                         <section>
-                        <div>
+                        <div className="howtouse">
                         <h2 className="h1-responsive font-weight-bold text-center my-5">
                                 How to Use Armagyeddon?
                                 </h2>
@@ -104,7 +103,7 @@ class Index extends React.Component {
                         </section>
 
                         <section>
-                        <div>
+                        <div className="gyelist">
                         <h2 className="h1-responsive font-weight-bold text-center my-5">
                                 현재 운영되고 있는 계모임
                                 </h2>
@@ -126,12 +125,13 @@ class Index extends React.Component {
                         </section>
 
                 <section className="my-5">
+                    <div className="whysogreat">
                     <h2 className="h1-responsive font-weight-bold text-center my-5">
                         Why is it so great?
                         </h2>
-                    <p className="lead grey-text w-responsive text-center mx-auto mb-5">
+                    {/* <p className="lead grey-text w-responsive text-center mx-auto mb-5">
                         왜 아마곗돈을 사용할까요?
-                        </p>
+                        </p> */}
 
                     <div className="main_card">
                     <MDBRow>
@@ -220,11 +220,26 @@ class Index extends React.Component {
                         </MDBCol>
                        
                     </MDBRow>
-                    
+                    </div>
                     </div>
                 </section>
 
-                <AnimationComponent></AnimationComponent>
+
+                </div>
+
+                <section>
+                        <div className="feedback_user">
+                        <h3 className="h1-responsive font-weight-bold text-center my-5">
+                                아마곗돈 이용 후기
+                                </h3>
+                            <AnimationComponent></AnimationComponent>                                
+                        </div>
+                </section>
+
+
+                <div>
+                <FriendsComponent></FriendsComponent>
+                
                 </div>
 {/* 
                 <div>

@@ -1,5 +1,8 @@
 import React from 'react';
 import GyeService from '../../services/GyeService';
+import { MDBCol, MDBIcon } from "mdbreact";
+import { MDBFormInline, MDBBtn } from "mdbreact";
+import styles from '../../static/css/gye.css'
 
 
 class GyeSearchComponent extends React.Component {
@@ -8,9 +11,13 @@ class GyeSearchComponent extends React.Component {
         super(props);
 
         this.state = {
-            gyes : []
+            gyes : [],
+            searchGyeList: []
         };
+
+        this.handleSearch = this.handleSearch.bind(this);
     }
+
 
     componentDidMount() {
         GyeService.getGyeList()
@@ -20,10 +27,32 @@ class GyeSearchComponent extends React.Component {
         .catch(error => {
 
         })
+
+        this.searchGyeList();
+    }
+
+    searchGyeList() {
+        GyeService.searchGyeList()
+        .then(response => {
+            this.setState({searchGyeList: response.data});
+        }).catch(error => {
+
+        })
+    }
+
+    handleSearch(e) {
+
+        if(this.searchGyeList()){
+
+        }
+
     }
 
     render() {
 
+        let searchGyeList = this.state.searchGyeList;
+
+        
         return(
             <div>
                 <hr></hr>
@@ -37,10 +66,10 @@ class GyeSearchComponent extends React.Component {
                                 <p>블록체인 기반 계모임 플렛폼 Aramagyeddon에서 당신의 안전한 계모임을 생성하고 사람들을 모아보세요 </p>
                                 <p>변경 불가능한 장부를 자동으로 생성하여 여러분의 곗돈을 안전하게 지켜드립니다.</p>
                             </div>
-    
+ -   
                         <form method="post" class="search-jobs-form">
                             <div class="row mb-5">
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                                {/* <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                     <input type="text" class="form-control form-control-lg" placeholder="목표 수령액"/>
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
@@ -62,7 +91,23 @@ class GyeSearchComponent extends React.Component {
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <button type="submit" class="btn btn-primary btn-lg btn-block text-white btn-search">
                                     <span class="icon-search icon mr-2"></span>Search Gye</button>
+                                </div> */}
+
+                                <MDBCol className="search_gye" md="6">
+                                <div className="input-group md-form form-sm form-1 pl-0">
+                                    <div className="input-group-prepend">
+                                    <span className="input-group-text purple lighten-3" id="basic-text1">
+                                        <MDBIcon className="text-white" icon="search" />
+                                    </span>
+                                    </div>
+                                <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
+                                    <MDBBtn gradient="purple" rounded size="sm" type="submit" className="mr-auto" onClick={this.handleSearch}>
+                                    Search
+                                    </MDBBtn>
+
                                 </div>
+                                </MDBCol>
+
                             </div>
     
                             
@@ -70,6 +115,9 @@ class GyeSearchComponent extends React.Component {
                     </div>
                 </div>
             </div>
+
+
+
             </div>
         );
 

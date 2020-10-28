@@ -7,6 +7,8 @@ import MyProfileContent from './MyProfileContent';
 import { MDBIcon } from "mdbreact";
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import LoginSuccess from '../home/LoginSuccess';
+
 
 const useStyles = makeStyles((theme) => ({
   typography: {
@@ -31,19 +33,24 @@ export default function SimplePopover() {
 
   return (
     <div>
+      <div>
+        
         <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
         <MDBIcon icon="user-alt" />
-</Button>
-<Menu
-  id="simple-menu"
-  anchorEl={anchorEl}
-  keepMounted
-  open={Boolean(anchorEl)}
-  onClose={handleClose}
->
-  <MenuItem onClick={handleClose}>Profile</MenuItem>
-  <MyProfileContent></MyProfileContent>
-</Menu>
+        <LoginSuccess></LoginSuccess>
+        </Button>
+
+      </div>
+    <Menu
+      id="simple-menu"
+      anchorEl={anchorEl}
+      keepMounted
+      open={Boolean(anchorEl)}
+      onClose={handleClose}
+    >
+      <MenuItem onClick={handleClose}>Profile</MenuItem>
+      <MyProfileContent></MyProfileContent>
+    </Menu>
      
     </div>
   );

@@ -12,6 +12,7 @@ class GyeListComponent extends React.Component {
         };
     }
 
+
     componentDidMount() {
         GyeService.getGyeList()
         .then(response => {

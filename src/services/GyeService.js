@@ -7,9 +7,9 @@ class GyeService {
         return axios.get('/gye');
     }
 
-    searchGyeList() {
+    searchGyeList(keyword) {
         AuthenticationService.setupAxiosInterceptors();
-        return axios.get('/gye');
+        return axios.get('/gye/search'+keyword);
     }
 
    

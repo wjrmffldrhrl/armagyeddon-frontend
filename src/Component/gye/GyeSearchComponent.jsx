@@ -7,6 +7,7 @@ import styles from '../../static/css/gye.css'
 
 class GyeSearchComponent extends React.Component {
 
+    searchHandler;
     constructor(props) {
         super(props);
 
@@ -14,9 +15,11 @@ class GyeSearchComponent extends React.Component {
             gyes : [],
             searchGyeList: []
         };
-
-        this.handleSearch = this.handleSearch.bind(this);
+        this.searchkeyword = ""
+        //this.searchHandler=props.searchHandler;
+        //this.handleSearch = this.handleSearch.bind(this);
     }
+
 
 
     componentDidMount() {
@@ -41,16 +44,22 @@ class GyeSearchComponent extends React.Component {
     }
 
     handleSearch(e) {
+        console.log("searchButton")
+        this.props.searchHandler(this.searchkeyword.value);
 
-        if(this.searchGyeList()){
 
-        }
+        /*
+        this.setState(
+            {
+                [e.target.name]
+                    :e.target.value
+            }
+        )
+        */
 
     }
 
     render() {
-
-        let searchGyeList = this.state.searchGyeList;
 
         
         return(
@@ -67,32 +76,8 @@ class GyeSearchComponent extends React.Component {
                                 <p>변경 불가능한 장부를 자동으로 생성하여 여러분의 곗돈을 안전하게 지켜드립니다.</p>
                             </div>
  -   
-                        <form method="post" class="search-jobs-form">
+                        <form class="search-jobs-form">
                             <div class="row mb-5">
-                                {/* <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                    <input type="text" class="form-control form-control-lg" placeholder="목표 수령액"/>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                    <select class="form-control form-control-lg" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="월 납입액">
-                                    <option>~100,000원</option>
-                                    <option>100,000원~300,000원</option>
-                                    <option>300,000원~600,000원</option>
-                                    <option>600,000원~1000,000원</option>
-                                    <option>1000,000원~</option>                        
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                    <select class="form-control form-control-lg " data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="계원 수">
-                                    <option>3명</option>
-                                    <option>5명</option>
-                                    <option>7명</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                <button type="submit" class="btn btn-primary btn-lg btn-block text-white btn-search">
-                                    <span class="icon-search icon mr-2"></span>Search Gye</button>
-                                </div> */}
-
                                 <MDBCol className="search_gye" md="6">
                                 <div className="input-group md-form form-sm form-1 pl-0">
                                     <div className="input-group-prepend">
@@ -100,8 +85,8 @@ class GyeSearchComponent extends React.Component {
                                         <MDBIcon className="text-white" icon="search" />
                                     </span>
                                     </div>
-                                <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
-                                    <MDBBtn gradient="purple" rounded size="sm" type="submit" className="mr-auto" onClick={this.handleSearch}>
+                                <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" ref={(c) => this.searchkeyword = c} />
+                                    <MDBBtn gradient="purple" rounded size="sm" className="mr-auto" onClick={(e)=> this.props.updateSearchKeyword(this.searchkeyword.value)}>
                                     Search
                                     </MDBBtn>
 

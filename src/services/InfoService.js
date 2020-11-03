@@ -8,6 +8,7 @@ class InfoService {
         AuthenticationService.setupAxiosInterceptors();
         return axios.get('/user-info/' + email);
     }
+    
 
     getMyGyeList(email) {
         AuthenticationService.setupAxiosInterceptors();

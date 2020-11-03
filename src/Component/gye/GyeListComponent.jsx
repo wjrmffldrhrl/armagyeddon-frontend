@@ -1,10 +1,11 @@
 import React from 'react';
 import GyeService from '../../services/GyeService';
 import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { Label } from 'reactstrap';
 
 class GyeListComponent extends React.Component {
 
-    constructor(props) {
+    constructor(props) { 
         super(props);
 
         this.state = {
@@ -24,37 +25,46 @@ class GyeListComponent extends React.Component {
         })
     }
 
+    componentDidUpdate(prevProps) {
+        console.log(this.props.searchKeyword)
+        
+      } 
     render() {
         let gyes = this.state.gyes;
+        console.log(this.props.searchKeyword)   
 
         
-        const listItem = gyes.map((gye) =>
-            <div className="col-md-6 col-lg-4 mb-5" key={gye.id}>
-                <MDBContainer className="mt-5">
-  
-                <MDBRow className="mt-4">
-                    <MDBCol md="10">
-                    <MDBView hover zoom>
-                    <a ><img src="images/cute.jpg" alt="Image" className="img-fluid rounded mb-4"/></a>
-                
-                        <MDBMask className="flex-center">
-                        <p className="white-text">
-                        <p>Type : {gye.type}</p>
-                        <p>Target Money : {gye.targetMoney}</p>
-                        <p>Total Member : {gye.totalMember}</p>
-                        <p>Period : {gye.period} month</p>
-                        </p>
-                        </MDBMask>
-                    </MDBView>
-                    <h3><a href={'/gye/' + gye.id} className="text-black">{gye.title}</a></h3>
-                    <div>April 15, 2019 <span className="mx-2">|</span> <a href="#">2 Comments</a></div>
-                    </MDBCol>
+        const listItem = gyes.map((gye) =>{
+            if(gye.title.search( this.props.searchKeyword) == -1 && this.props.searchKeyword!="") return(<></>)
+            else  return (
+                <div className="col-md-6 col-lg-4 mb-5" key={gye.id}>
+                    <MDBContainer className="mt-5">
+                    <MDBRow className="mt-4">
+                        <MDBCol md="10">
+                        <MDBView hover zoom>
+                        <a ><img src="images/cute.jpg" alt="Image" className="img-fluid rounded mb-4"/></a>
                     
-                </MDBRow>
-                </MDBContainer>
+                            <MDBMask className="flex-center">
+                            <p className="white-text">
+                            <p>Type : {gye.type}</p>
+                            <p>Target Money : {gye.targetMoney}</p>
+                            <p>Total Member : {gye.totalMember}</p>
+                            <p>Period : {gye.period} month</p>
+                            </p>
+                            </MDBMask>
+                        </MDBView>
+                        <h3><a href={'/gye/' + gye.id} className="text-black">{gye.title}</a></h3>
+                        <div>April 15, 2019 <span className="mx-2">|</span> <a href="#">2 Comments</a></div>
+                        </MDBCol>
+                        
+                    </MDBRow>
+                    </MDBContainer>
+                </div>
 
-               
-            </div>
+                )
+            }
+        
+            
         );
 
         

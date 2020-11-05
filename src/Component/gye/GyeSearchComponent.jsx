@@ -46,17 +46,6 @@ class GyeSearchComponent extends React.Component {
     handleSearch(e) {
         console.log("searchButton")
         this.props.searchHandler(this.searchkeyword.value);
-
-
-        /*
-        this.setState(
-            {
-                [e.target.name]
-                    :e.target.value
-            }
-        )
-        */
-
     }
 
     render() {

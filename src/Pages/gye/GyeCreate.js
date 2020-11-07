@@ -7,7 +7,7 @@ class GyeCreate extends React.Component {
         return (
              <div className="gyecreate">
                  <div className="gyetitle">
-                 <h1>Create Gye</h1>
+                 <h1></h1>
 
                  </div>
                  <hr></hr>

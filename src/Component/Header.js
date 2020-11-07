@@ -155,7 +155,7 @@ class Header extends React.Component {
                 </div>     
                                
             </section>           
-            <Router>
+            
                 <div>
                 <MDBNavbar dark expand="md" fixed="top">
                     <MDBContainer>
@@ -173,7 +173,7 @@ class Header extends React.Component {
                 </MDBNavbar>
                 {this.state.collapseID && overlay}
                 </div>
-            </Router>
+            
           
             </div> 
            

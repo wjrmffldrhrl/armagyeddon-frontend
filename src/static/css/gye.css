@@ -43,6 +43,7 @@
 .gyedetailform {
     height: 500px;
     width: 500px;
+    margin-top: 300px;
     text-align: center;
     margin: 0 auto;
     background: #DDC2F4;
@@ -60,3 +61,4 @@
 .search_gye {
     margin-left: 250px;
 }
+

@@ -42,7 +42,7 @@ return (
             <h3 className="display-3 font-weight-bold mb-0 pt-md-5">
               Armagyeddon{" "}
             </h3>
-            <hr className="hr-light my-4 w-75" />
+            <hr className="hr-light my-4 w-95" />
             <h4 className="subtext-header mt-2 mb-4">
               기존에 경험해보지 못했던 P2P 금융 플랫폼.
             </h4>

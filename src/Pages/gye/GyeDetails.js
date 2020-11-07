@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styles from '../../static/css/gye.css';
 
 
+
 class GyeDetails extends React.Component {
 
 
@@ -13,15 +14,15 @@ class GyeDetails extends React.Component {
              <div className="gyedetails">
 
                  <div className="gyetitle">
-                 <h1>Gye Details</h1>
+                 {/* <h1>Gye Details</h1> */}
 
                  </div>
                  <GyeDetailsComponent id={this.props.match.params.id}/>
 
-                <div>
+                {/* <div>
                  <Link to={"/management-gye/" + this.props.match.params.id} 
                     className="btn btn-success">Management</Link>
-                </div>
+                </div> */}
              </div>
         );
     }
